@@ -403,13 +403,16 @@ def analyze_and_update():
                 # Marca a la que pertenece (el primer subdirectorio de creaciones)
                 brand_rel = os.path.relpath(campaign_dir, SOURCE_CREACIONES)
                 brand_parts = brand_rel.split(os.sep)
-                brand_slug = brand_parts[0] if brand_parts else "general"
+                dir_slug = brand_parts[0] if brand_parts else "general"
                 
+                brand_slug = dir_slug
                 brand_name = brand_slug.capitalize()
-                if brand_slug == "reforma-tipo-1":
+                if dir_slug == "reforma-tipo-1":
                     brand_name = "Reforma Tipo 1"
-                elif brand_slug == "inteligencia-sevilla":
+                    brand_slug = "reforma"
+                elif dir_slug == "inteligencia-sevilla":
                     brand_name = "Inteligencia Sevilla"
+                    brand_slug = "sevilla"
                 
                 campaign_name = os.path.basename(campaign_dir)
                 campaign_title = f"{brand_name} — {campaign_name.replace('-', ' ').replace('_', ' ').title()}"
