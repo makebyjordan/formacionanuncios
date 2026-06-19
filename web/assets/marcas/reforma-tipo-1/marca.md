@@ -16,7 +16,9 @@
 ## Flujo de referencia
 - **Formato estrella:** antes → obra (con sonido de ambiente) → reforma acabada. 3 imágenes hiperrealistas con cámara fija idéntica + 1 vídeo 10s que las encadena (ambiente de obra + voz en off ES-España).
 - Primer set creado: **loft industrial** (escalera metálica + ladrillo visto + barra de microcemento). Ver `creaciones/reforma-tipo-1/loft industrial antes-durante-final/`.
+- Set innovador: **Time-collapse "Caos→Hogar"** (10 s, 9:16) — la habitación se reconstruye sola en un único plano fijo (reverse-demolition morphing). Ver `creaciones/reforma-tipo-1/time-collapse-caos-hogar/`.
 
 ## Contenido de referencia
-- Pack de prompts: `creaciones/reforma-tipo-1/loft industrial antes-durante-final/PROMPTS-antes-durante-final.md`
-- Imágenes y vídeo generados: guardar en las subcarpetas `imagenes/` y `video/` de ese mismo set.
+- Pack de prompts (loft industrial): `creaciones/reforma-tipo-1/loft industrial antes-durante-final/PROMPTS-antes-durante-final.md`
+- Pack de prompts (time-collapse): `creaciones/reforma-tipo-1/time-collapse-caos-hogar/PACK-PROMPTS.md` + `COPY-MONTAJE.md`. Imágenes y vídeo → subcarpetas `imagenes/` y `video/` de cada set.
+- Paleta propuesta (a falta de logo): cemento `#8A8A86` + carbón `#1A1A1A` + roble cálido `#B07C4F` + acento latón `#C9A24B`. Claim propuesto: **"Tu obra, sin sorpresas."**

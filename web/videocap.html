@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grabaciones de pantalla y videocapturas de Jordan sobre flujos de trabajo e instrucciones de inteligencia artificial.">
+    <title>Videocapturas del Mac — Jordan AI Ads Studio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=2.0">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .videocap-hero {
+            padding-top: calc(var(--header-height) + 40px);
+            padding-bottom: 40px;
+            background: linear-gradient(180deg, rgba(217, 160, 91, 0.05) 0%, rgba(9, 9, 11, 0) 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .videocap-grid-section {
+            padding: 60px 0 100px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-dot crimson"></span>
+                <span class="logo-dot gold"></span>
+                Jordan<span class="tech-glow">AI_Ads</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#hero">Inicio</a>
+                <a href="index.html#showroom">Showroom</a>
+                <a href="#" class="active">Videocap</a>
+                <a href="index.html#metodologia">Metodología</a>
+                <a href="index.html#skills">Skills de Claude</a>
+                <a href="index.html#formacion">Formación</a>
+            </nav>
+            <div class="header-cta">
+                <a href="index.html#showroom" class="btn btn-outline btn-sm">Volver al Showroom</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="videocap-hero">
+        <div class="container align-center">
+            <div class="hero-badge" style="margin: 0 auto 15px auto;">🖥️ GRABACIONES DE PANTALLA LOCALES</div>
+            <h1 class="gradient-text" style="font-size: 2.8rem; font-weight: 800; margin-bottom: 16px;">
+                Videocapturas del Mac (Videocap)
+            </h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1.05rem;">
+                Colección de tutoriales rápidos, demostraciones de flujos de trabajo e instrucciones guiadas grabadas directamente desde mi pantalla y subidas automáticamente.
+            </p>
+        </div>
+    </section>
+
+    <!-- Videocaps Grid Section -->
+    <section class="videocap-grid-section">
+        <div class="container">
+            <div class="videocaps-grid" id="videocaps-grid">
+                <!-- Videocap cards will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal Popup -->
+    <div id="video-modal" class="video-modal">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <video id="modal-video-player" src="" controls playsinline></video>
+            <h3 id="modal-video-title" class="modal-video-title"></h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-dot crimson"></span>
+                    <span class="logo-dot gold"></span>
+                    Jordan<span class="tech-glow">AI_Ads</span>
+                </a>
+                <p>Evolucionando la publicidad digital a través de prompt engineering y flujos de trabajo con inteligencia artificial generativa.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links-group">
+                    <h4>Navegación</h4>
+                    <a href="index.html#hero">Inicio</a>
+                    <a href="index.html#showroom">Showroom</a>
+                    <a href="#">Videocap</a>
+                    <a href="index.html#metodologia">Metodología</a>
+                    <a href="index.html#formacion">Formación</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Proyecto</h4>
+                    <a href="file:///Users/makebyjordan/local/myweb2teach/allVideosPhotoIaALL/">Carpeta allVideos...</a>
+                    <a href="#">Catálogo Maestro</a>
+                    <a href="#">Guía de Línea Visual</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Jordan AI Ads. Diseñado con fines de showcase y entrenamiento de prompts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const grid = document.getElementById("videocaps-grid");
+            const modal = document.getElementById("video-modal");
+            const modalVideo = document.getElementById("modal-video-player");
+            const modalTitle = document.getElementById("modal-video-title");
+            const modalClose = document.getElementById("modal-close");
+            const modalBackdrop = document.getElementById("modal-backdrop");
+            
+            // Cargar videocapturas desde videocaps.json
+            try {
+                const response = await fetch("videocaps.json");
+                if (!response.ok) {
+                    throw new Error("No videocaps file found");
+                }
+                const videocapsList = await response.json();
+                renderVideocaps(videocapsList);
+            } catch (error) {
+                console.error("Error loading videocaps:", error);
+                renderVideocaps([]);
+            }
+
+            function renderVideocaps(list) {
+                grid.innerHTML = "";
+                
+                if (list.length === 0) {
+                    grid.innerHTML = `
+                        <div class="no-projects" style="grid-column: 1 / -1; padding: 80px 20px; text-align: center; background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); width: 100%;">
+                            <i class="fa-solid fa-video-slash" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 20px; display: block;"></i>
+                            <h3 style="margin-bottom: 10px; font-size: 1.4rem;">No hay grabaciones de pantalla</h3>
+                            <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto; font-size: 0.95rem;">
+                                Coloca tus archivos de vídeo en la carpeta <code>videocap/</code> en la raíz del proyecto y ejecuta el análisis diciendo <strong>ANALIZA</strong> para sincronizarlas y visualizarlas aquí.
+                            </p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                list.forEach(video => {
+                    const card = document.createElement("div");
+                    card.className = "videocap-card";
+                    card.innerHTML = `
+                        <div class="videocap-media-container">
+                            <div class="videocap-thumbnail-fallback">
+                                <i class="fa-solid fa-desktop" style="font-size: 2.5rem; margin-bottom: 10px;"></i>
+                                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Videocaptura</span>
+                            </div>
+                            <div class="videocap-play-icon">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="videocap-content">
+                            <h3 class="videocap-title">${video.title}</h3>
+                            <span class="videocap-date"><i class="fa-regular fa-calendar"></i> ${video.date}</span>
+                        </div>
+                    `;
+                    
+                    // Click handler to open Modal
+                    card.addEventListener("click", () => {
+                        modalVideo.src = video.url;
+                        modalTitle.textContent = video.title;
+                        modal.classList.add("active");
+                    });
+                    
+                    grid.appendChild(card);
+                });
+            }
+
+            // Cerrar Modal
+            function closeModal() {
+                modal.classList.remove("active");
+                modalVideo.pause();
+                modalVideo.src = "";
+            }
+
+            modalClose.addEventListener("click", closeModal);
+            modalBackdrop.addEventListener("click", closeModal);
+            
+            // Cerrar con Escape
+            window.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal.classList.contains("active")) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
