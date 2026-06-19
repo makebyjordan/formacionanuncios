@@ -17,6 +17,12 @@ PROJECTS_JSON_PATH = os.path.join(WORKSPACE_DIR, "web/projects.json")
 VIDEOCAPS_JSON_PATH = os.path.join(WORKSPACE_DIR, "web/videocaps.json")
 PROJECTS_HTML_DIR = os.path.join(WORKSPACE_DIR, "web/projects")
 
+# Videos a ignorar en el escaneo automático (anuncios eliminados)
+IGNORE_VIDEOS = {
+    "WhatsApp Video 2026-06-18 at 00.14.41.mp4",
+    "Alithia-no-hacemos-webs-convencionales.mp4"
+}
+
 # Template HTML para las páginas de detalle
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="es">
@@ -382,7 +388,9 @@ def analyze_and_update():
     # Escanear creaciones
     for root, dirs, files in os.walk(SOURCE_CREACIONES):
         for file in files:
-            if file.endswith('.mp4'):
+            if file.lower().endswith(('.mp4', '.mov', '.m4v', '.webm', '.avi')) and not file.startswith('.'):
+                if file in IGNORE_VIDEOS:
+                    continue
                 video_full_path = os.path.join(root, file)
                 # Ruta relativa a SOURCE_CREACIONES
                 rel_path = os.path.relpath(video_full_path, SOURCE_CREACIONES)
