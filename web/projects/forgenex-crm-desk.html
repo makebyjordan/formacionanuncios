@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgenex CRM Desk — Desglose de Anuncio IA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    
+    <!-- Custom Page Styles -->
+    <style>
+        .back-nav {
+            margin-top: calc(var(--header-height) + 20px);
+            margin-bottom: 20px;
+        }
+        .project-meta-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .md-viewer {
+            background-color: #0b0b0e;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 24px;
+            max-height: 450px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+        }
+        .md-viewer h1, .md-viewer h2, .md-viewer h3 {
+            color: var(--accent-gold);
+            margin-top: 20px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 6px;
+        }
+        .md-viewer h1:first-child, .md-viewer h2:first-child {
+            margin-top: 0;
+        }
+        .md-viewer p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .md-viewer ul, .md-viewer ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .md-viewer li {
+            margin-bottom: 6px;
+        }
+        .md-viewer code {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #e4e4e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .md-viewer pre {
+            background-color: #050507;
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+        .md-viewer pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            display: block;
+        }
+        .md-tag-badge {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-logo">
+                <span class="logo-dot crimson"></span>
+                <span class="logo-dot gold"></span>
+                Jordan<span class="tech-glow">AI_Ads</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Showroom Principal</a>
+                <a href="../index.html#metodologia">Metodología</a>
+                <a href="../index.html#formacion">Formación</a>
+            </nav>
+            <div class="header-cta">
+                <a href="../index.html" class="btn btn-outline btn-sm">Volver al Showroom</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Back Navigation Link -->
+        <div class="back-nav">
+            <a href="../index.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Showroom
+            </a>
+        </div>
+
+        <div class="project-detail-layout vertical-layout">
+            
+            <!-- Left Column: Media Players & Original Markdown Documents -->
+            <div class="media-column">
+                
+                <!-- Video Player -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-circle-play"></i> Anuncio Vídeo Final Acabado</h3>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <video src="../assets/creaciones/forgenex/videos/crm%20modular%20desk%201%20video/Desk_evolving_to_CRM_system_202606190243.mp4" controls autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <!-- Reference Image Slider -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-regular fa-image"></i> Fotogramas Clave de Referencia (Prompts Ancla)</h3>
+                    <div class="showcase-selector">
+                        <button class="selector-tab active" data-img-src="../assets/creaciones/forgenex/referencias%20PRO%20para%20video/crm%20modular%20desk%201/1-caos-Desk_buried_in_chaos.jpeg">1. Caos</button>
+                        <button class="selector-tab" data-img-src="../assets/creaciones/forgenex/referencias%20PRO%20para%20video/crm%20modular%20desk%201/2-montaje-modular-Desk_with_monitor_dashboard.jpeg">2. Montaje</button>
+                        <button class="selector-tab" data-img-src="../assets/creaciones/forgenex/referencias%20PRO%20para%20video/crm%20modular%20desk%201/3-resultado-Desk_with_CRM_dashboard.jpeg">3. Orden</button>
+                    </div>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <img id="detail-active-img" src="../assets/creaciones/forgenex/referencias%20PRO%20para%20video/crm%20modular%20desk%201/1-caos-Desk_buried_in_chaos.jpeg" alt="Fotograma clave">
+                    </div>
+                </div>
+
+                <!-- Markdown Files Showcased -->
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Ficha de Marca Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> marcas/forgenex/marca.md</h3>
+                    <div class="md-viewer">
+                        <h2>Forgenex — Desarrollo de CRM</h2>
+                        <ul>
+                            <li><strong>Alias / cómo la llama el usuario:</strong> <code>forgenex</code></li>
+                            <li><strong>Sector:</strong> desarrollo de CRM / software a medida</li>
+                            <li><strong>Tono:</strong> profesional, técnico, cercano</li>
+                        </ul>
+                        <h3>Identidad visual</h3>
+                        <p><strong>Símbolo:</strong> icono martillo/forja rojo-coral con chispa + wordmark "forgenex".<br>
+                        <strong>Acento de color:</strong> rojo/coral.<br>
+                        <strong>Mundo de marca:</strong> UGC en oficina con branding Forgenex en pantalla (misma actriz UGC compartida).</p>
+                        <h3>Logos (<code>logos/</code>)</h3>
+                        <p>Principal: <code>forgenex-logo.png</code> — icono + "forgenex"<br>
+                        Variante: <code>logo-forgenex-2.webp</code> — variante icono.</p>
+                        <blockquote>⚠️ Logos en baja resolución. Para uso a gran tamaño/pantalla, conseguir una versión en alta calidad.</blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Prompts, CapCut instructions, & Custom Training -->
+            <div class="details-column">
+                <div class="project-meta-box">
+                    <span class="card-brand">Forgenex</span>
+                    <h2 class="card-title" style="font-size: 1.8rem; margin-bottom: 14px;">Anuncio Conceptual CRM Desk</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        Este proyecto publicitario utiliza una metáfora física (un escritorio desordenado que evoluciona hasta convertirse en una estación de trabajo optimizada con un software de CRM en pantalla) para explicar la simplicidad que aporta el producto Forgenex.
+                    </p>
+                </div>
+
+                <!-- Prompts List -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-code"></i> Fórmulas de Prompts Utilizadas</h3>
+                    
+                    <!-- Prompt 1 -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Imagen 1 — El Caos en la Oficina</span>
+                            <button class="copy-btn js-copy-prompt" data-text="Hyperrealistic photography, vertical 9:16. A desk buried in extreme chaos, cluttered with stacked unorganized papers, messy cables, overflowing coffee mugs, sticky notes all over. Shot from a fixed front-facing angle, view locked onto the desk, lens at eye level. Cold, desaturated color grade. Flat morning light through a window on the left. No people. Spotless microcement desk base beneath the mess.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>Hyperrealistic photography, vertical 9:16. A desk buried in extreme chaos, cluttered with stacked unorganized papers, messy cables, overflowing coffee mugs...</code></pre>
+                        </div>
+                        <div class="prompt-tip">
+                            <strong>Consejo:</strong> Usa 'no people' para centrar la fuerza en los objetos del espacio.
+                        </div>
+                    </div>
+
+                    <!-- Prompt 2 -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Imagen 2 — Ensamblado / Transición</span>
+                            <button class="copy-btn js-copy-prompt" data-text="Hyperrealistic photography, vertical 9:16. The same desk, mid-organization. A modular monitor setup is being assembled on the desk. Monitor screens show partial software dashboards and wireframes. Some cables are neatly bundled, others are being connected. Half of the papers are organized in folders, tools and modules rest on the table. Color grade starts transitioning to warmer coral tones. Window light on the left. No people.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>Hyperrealistic photography, vertical 9:16. The same desk, mid-organization. A modular monitor setup is being assembled on the desk...</code></pre>
+                        </div>
+                        <div class="prompt-tip">
+                            <strong>Consejo:</strong> Modela interfaces incompletas para dar sensación de 'construcción'.
+                        </div>
+                    </div>
+
+                    <!-- Prompt 3 -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Imagen 3 — El Orden / Panel Final</span>
+                            <button class="copy-btn js-copy-prompt" data-text="Hyperrealistic photography, vertical 9:16. The same desk, fully organized and complete. A clean minimalist workspace. A high-end monitor displays a sleek, clean, modern CRM dashboard with colorful charts and statistics. The desk is completely tidy, a single green plant, a clean coffee mug. Warm golden hour light through the window on the left. Warm, inviting color grade. No people. Spotless microcement desk surface.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>Hyperrealistic photography, vertical 9:16. The same desk, fully organized and complete. A clean minimalist workspace. A high-end monitor displays a sleek...</code></pre>
+                        </div>
+                        <div class="prompt-tip">
+                            <strong>Consejo:</strong> Transicionar la luz a 'golden hour' (luz dorada de la tarde) refuerza el alivio visual.
+                        </div>
+                    </div>
+
+                    <!-- Video Prompt -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Vídeo final (Kling/Flow)</span>
+                            <button class="copy-btn js-copy-prompt" data-text="Cinematic transition video. Use the three reference images provided as strict visual anchors — maintain identical desk size, identical fixed camera angle, identical lens height, identical window on the left. 0.0-3.0s: Desk in extreme chaos (Image 1), static shot. 3.0-6.5s: Desktop evolves, modular monitor assembly in progress (Image 2) with shifting light. 6.5-10.0s: Smooth transition to the completed clean workspace with the active CRM dashboard (Image 3) in warm golden light. Photorealistic, cinematic, 16:9.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>Cinematic transition video. Use the three reference images provided as strict visual anchors — maintain identical desk size, identical fixed camera angle...</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CapCut Guide -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-scissors"></i> Rótulos y Copies en CapCut</h3>
+                    <div class="prompt-panel">
+                        <div class="prompt-content">
+                            <pre style="white-space: pre-wrap; font-family: var(--font-body); font-size: 0.9rem; color: var(--text-secondary);">
+- **0.0 - 3.0s (Caos):** Rótulo central: `¿TU NEGOCIO ESTÁ FUERA DE CONTROL?`
+- **3.0 - 6.5s (Montaje):** Rótulo central: `ORDENA TUS PROCESOS PASO A PASO`
+- **6.5 - 10.0s (Resultado):** Rótulo central: `CRM MODULAR FORGENEX. TU EMPRESA EN UN VISTAZO`
+- **End Card:** Logotipo Forgenex + CTA: `Prueba la demo gratis`
+- **Voz en Off:** *"¿Caos en tu gestión? Ensámblalo todo con Forgenex: el CRM modular que se adapta a tu negocio."*</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Section -->
+                <div class="project-meta-box">
+                    <h4 class="detail-training-title"><i class="fa-solid fa-graduation-cap"></i> Lecciones de este Proyecto</h4>
+                    <div class="detail-training-body">
+                        <p>Este proyecto ilustra cómo materializar ideas lógicas y de software abstracto a través de una escena física.</p>
+                        <ul>
+                            <li><strong>Metáforas Fuertes:</strong> Los papeles tirados y cables representan el desorden interno del software y la frustración operativa.</li>
+                            <li><strong>Coherencia de la Cámara:</strong> Bloquear el ángulo de la cámara (frontal, altura de los ojos) es obligatorio para que la IA ensamble las piezas sobre la mesa de forma correcta en lugar de disolver el plano.</li>
+                            <li><strong>Evitar Texto Complejo en IA:</strong> Los elementos de texto de la pantalla final se renderizan como gráficos coloridos y barras abstractas, aplicando el texto limpio y legible mediante edición posterior (CapCut).</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Jordan AI Ads. Diseñado con fines de entrenamiento y showcase de prompts.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Interactive Image Slider
+        const tabs = document.querySelectorAll('.selector-tab');
+        const activeImg = document.getElementById('detail-active-img');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeImg.src = tab.getAttribute('data-img-src');
+            });
+        });
+
+        // Copy to clipboard actions
+        const copyBtns = document.querySelectorAll('.js-copy-prompt');
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const text = decodeURIComponent(btn.getAttribute('data-text'));
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Copiado!`;
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

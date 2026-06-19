@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Sevilla — Desglose de Anuncio IA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    
+    <!-- Custom Page Styles -->
+    <style>
+        .back-nav {
+            margin-top: calc(var(--header-height) + 20px);
+            margin-bottom: 20px;
+        }
+        .project-meta-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .md-viewer {
+            background-color: #0b0b0e;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 24px;
+            max-height: 450px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+        }
+        .md-viewer h1, .md-viewer h2, .md-viewer h3 {
+            color: var(--accent-gold);
+            margin-top: 20px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 6px;
+        }
+        .md-viewer h1:first-child, .md-viewer h2:first-child {
+            margin-top: 0;
+        }
+        .md-viewer p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .md-viewer ul, .md-viewer ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .md-viewer li {
+            margin-bottom: 6px;
+        }
+        .md-viewer code {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #e4e4e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .md-viewer pre {
+            background-color: #050507;
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+        .md-viewer pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            display: block;
+        }
+        .md-tag-badge {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-logo">
+                <span class="logo-dot crimson"></span>
+                <span class="logo-dot gold"></span>
+                Jordan<span class="tech-glow">AI_Ads</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Showroom Principal</a>
+                <a href="../index.html#metodologia">Metodología</a>
+                <a href="../index.html#formacion">Formación</a>
+            </nav>
+            <div class="header-cta">
+                <a href="../index.html" class="btn btn-outline btn-sm">Volver al Showroom</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Back Navigation Link -->
+        <div class="back-nav">
+            <a href="../index.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Showroom
+            </a>
+        </div>
+
+        <div class="project-detail-layout vertical-layout">
+            
+            <!-- Left Column: Media Players & Original Markdown Documents -->
+            <div class="media-column">
+                
+                <!-- Video Player -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-circle-play"></i> Anuncio Vídeo Final Acabado</h3>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <video src="../assets/creaciones/inteligencia-sevilla/videos/Alithia-no-hacemos-webs-convencionales.mp4" controls autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <!-- Reference Image Slider -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-regular fa-image"></i> Fotogramas Clave de Referencia (Prompts Ancla)</h3>
+                    <div class="showcase-selector">
+                        <button class="selector-tab active" data-img-src="../assets/creaciones/inteligencia-sevilla/imagenes/Woman_pointing_at_TV_202606140550.jpeg">Presentadora</button>
+                        <button class="selector-tab" data-img-src="../assets/creaciones/inteligencia-sevilla/imagenes/Professionals_in_corporate_office_202606140604.jpeg">Oficina</button>
+                        <button class="selector-tab" data-img-src="../assets/creaciones/inteligencia-sevilla/imagenes/Woman_using_laptop_at_salon_202606140608.jpeg">Visita Cliente</button>
+                    </div>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <img id="detail-active-img" src="../assets/creaciones/inteligencia-sevilla/imagenes/Woman_pointing_at_TV_202606140550.jpeg" alt="Fotograma clave">
+                    </div>
+                </div>
+
+                <!-- Markdown Files Showcased -->
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Ficha de Marca Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> marcas/inteligencia-sevilla/marca.md</h3>
+                    <div class="md-viewer">
+                        <h2>Inteligencia Sevilla (IS)</h2>
+                        <ul>
+                            <li><strong>Alias / cómo la llama el usuario:</strong> <code>is</code>, <code>IS</code>, <code>inteligencia sevilla</code>, <code>consultora</code></li>
+                            <li><strong>Sector:</strong> consultoría de IA para PYMEs (Sevilla)</li>
+                            <li><strong>Web / CTA:</strong> inteligenciasevilla.com — auditoría gratuita de 3 horas</li>
+                            <li><strong>Tono:</strong> experto, cercano, sin tecnicismos ("sin humo")</li>
+                        </ul>
+                        <h3>Identidad visual</h3>
+                        <p><strong>Símbolo:</strong> letras "IS" en cromo plateado dentro de esfera facetada con luz roja/circuitos.<br>
+                        <strong>Acento de color:</strong> rojo carmesí <code>#C8102E</code> + cromo metálico + dorado/ámbar.<br>
+                        <strong>Mundo de marca:</strong> dos capas — (a) escenas lifestyle cálidas (oficina luz cálida, beige/crema) y (b) brand cards oscuras tech (red dorada + chrome IS).</p>
+                        <h3>Logos (<code>logos/</code>)</h3>
+                        <ul>
+                            <li><code>IS_logo_alta_calidad_4K-red-vector.png</code> — principal recomendado para end card de vídeos.</li>
+                            <li><code>logo-inteligencia-sevilla-IS-ia.png</code> — IS sobre fondo de red dorada (brand card).</li>
+                            <li><code>logo-IS-inteligencia-sevilla-black-alpha.jpg</code> — IS oscuro sobre fondo claro.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Prompts, CapCut instructions, & Custom Training -->
+            <div class="details-column">
+                <div class="project-meta-box">
+                    <span class="card-brand">Inteligencia Sevilla</span>
+                    <h2 class="card-title" style="font-size: 1.8rem; margin-bottom: 14px;">Campaña Consultoría de IA sin Humo</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        Este proyecto representa la identidad visual cerrada del laboratorio: ambientes de oficina luminosos y cálidos en tonos crema, que contrastan con los cierres corporativos (brand cards) en un universo de partículas y redes doradas.
+                    </p>
+                </div>
+
+                <!-- Prompts List -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-code"></i> Fórmulas de Prompts Utilizadas</h3>
+                    
+                    <!-- Prompt 1 -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Imagen 1 — Reunión en Oficina Cálida (16:9)</span>
+                            <button class="copy-btn js-copy-prompt" data-text="Three young professionals (two men in navy shirts, one woman in cream top) sitting around an dark oak meeting table in a modern glass-walled office in Seville. In the background, a large TV screen displays the 'IS Inteligencia Sevilla' logo with amber and red charts. Natural sunlight coming from a window. Warm color grading, expert and collaborative atmosphere, 8K.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>Three young professionals (two men in navy shirts, one woman in cream top) sitting around an dark oak meeting table in a modern glass-walled office...</code></pre>
+                        </div>
+                        <div class="prompt-tip">
+                            <strong>Consejo:</strong> Pinta el logotipo de la marca de forma contextual en los dispositivos (TV de la oficina).
+                        </div>
+                    </div>
+
+                    <!-- Prompt 2 -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Imagen 2 — Presentadora (9:16)</span>
+                            <button class="copy-btn js-copy-prompt" data-text="A young Spanish female presenter with long dark hair, wearing a beige cream ribbed knit top, pointing with her hand towards a television screen showing a business dashboard. Office setting, warm and friendly atmosphere. Crisp details, photorealistic, 9:16.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>A young Spanish female presenter with long dark hair, wearing a beige cream ribbed knit top, pointing with her hand...</code></pre>
+                        </div>
+                        <div class="prompt-tip">
+                            <strong>Consejo:</strong> Cita la misma descripción física para reutilizar el avatar UGC base de la actriz compartida.
+                        </div>
+                    </div>
+
+                    <!-- Prompt 3 -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Imagen 3 — Entrega en Comercio Real</span>
+                            <button class="copy-btn js-copy-prompt" data-text="A young female consultant in a cream top using a laptop on a wooden counter inside a bright, modern dog grooming salon. The salon owner is standing next to her, smiling happily. In the background, dog grooming tools are neatly organized. Warm natural lighting, authentic environment, photorealistic, 16:9.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>A young female consultant in a cream top using a laptop on a wooden counter inside a bright, modern dog grooming salon...</code></pre>
+                        </div>
+                        <div class="prompt-tip">
+                            <strong>Consejo:</strong> Mostrar la tecnología integrada en comercios locales (peluquería canina) humaniza el valor de la IA.
+                        </div>
+                    </div>
+
+                    <!-- Video Prompt -->
+                    <div class="prompt-panel">
+                        <div class="prompt-panel-header">
+                            <span class="prompt-panel-title">Vídeo UGC Presentadora (Alithia)</span>
+                            <button class="copy-btn js-copy-prompt" data-text="Vertical 9:16 talking-head video. A young Spanish woman with long dark hair, wearing a cream ribbed knit top, speaking confidently in a modern sunlit corporate office. In the background, a TV displays the Inteligencia Sevilla logo. Warm tones, professional and authentic, no studio glare.">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                        <div class="prompt-content">
+                            <pre><code>Vertical 9:16 talking-head video. A young Spanish woman with long dark hair, wearing a cream ribbed knit top, speaking confidently...</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CapCut Guide -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-scissors"></i> Montaje en CapCut</h3>
+                    <div class="prompt-panel">
+                        <div class="prompt-content">
+                            <pre style="white-space: pre-wrap; font-family: var(--font-body); font-size: 0.9rem; color: var(--text-secondary);">
+- **0.0 - 3.0s (Hook):** Rótulo central: `BASTA DE PROMESAS IA SIN SENTIDO`
+- **3.0 - 7.0s (Giro):** Rótulo central: `AUDITAMOS TU NEGOCIO EN 3 HORAS GRATIS`
+- **7.0 - 10.0s (Cierre):** Rótulo central: `INTELIGENCIA SEVILLA. IA QUE FACTURA.`
+- **Voz en Off:** *"¿Cansado del humo de la IA? Analizamos tus procesos y creamos automatizaciones reales. Pide tu auditoría de 3 horas gratuita en inteligenciasevilla.com."*</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Section -->
+                <div class="project-meta-box">
+                    <h4 class="detail-training-title"><i class="fa-solid fa-graduation-cap"></i> Lecciones de este Proyecto</h4>
+                    <div class="detail-training-body">
+                        <p>Este proyecto enseña cómo estructurar un ADN de marca completo y aplicarlo de forma coherente en diferentes formatos publicitarios.</p>
+                        <ul>
+                            <li><strong>Evitar Clichés Tecnológicos:</strong> La guía de marca prohíbe el uso de fondos azules eléctricos futuristas u hologramas tridimensionales. La IA es tratada como una herramienta práctica e integrada en una oficina luminosa con madera.</li>
+                            <li><strong>Branding Orgánico:</strong> Las tazas de café negras con el logo plateado o la TV trasera de la sala son métodos elegantes para incorporar la marca tridimensionalmente sin recurrir a costosas post-producciones de rotulación digital.</li>
+                            <li><strong>Doble Capa Visual:</strong> Escenas del día a día cálidas (beige/crema) que resuelven en brand cards oscuras tech con mallas doradas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Jordan AI Ads. Diseñado con fines de entrenamiento y showcase de prompts.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Interactive Image Slider
+        const tabs = document.querySelectorAll('.selector-tab');
+        const activeImg = document.getElementById('detail-active-img');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeImg.src = tab.getAttribute('data-img-src');
+            });
+        });
+
+        // Copy to clipboard actions
+        const copyBtns = document.querySelectorAll('.js-copy-prompt');
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const text = decodeURIComponent(btn.getAttribute('data-text'));
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Copiado!`;
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

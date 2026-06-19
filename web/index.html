@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende a generar anuncios espectaculares con Inteligencia Artificial. La metodología de Jordan para estructurar prompts, crear consistencia visual y entrenar modelos publicitarios.">
+    <title>Jordan AI Ads Studio — Masterclass & Showroom de Prompts</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=2.0">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-dot crimson"></span>
+                <span class="logo-dot gold"></span>
+                Jordan<span class="tech-glow">AI_Ads</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#hero">Inicio</a>
+                <a href="#showroom">Showroom</a>
+                <a href="#metodologia">Metodología</a>
+                <a href="#skills">Skills de Claude</a>
+                <a href="#formacion">Formación</a>
+            </nav>
+            <div class="header-cta">
+                <a href="#showroom" class="btn btn-outline btn-sm">Explorar Prompts</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-glows">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">🚀 SHOWCASE PUBLICITARIO CON IA GENERATIVA</div>
+            <h1 class="hero-title">
+                Cómo Crear Anuncios <br>
+                <span class="gradient-text">Espectaculares con Prompts</span>
+            </h1>
+            <p class="hero-lead">
+                Bienvenido al laboratorio de <strong>Jordan</strong>. Aquí comparto mi metodología para estructurar instrucciones, refinar prompts y encadenar modelos de imagen y vídeo. Explora los proyectos reales creados con IA, copia los prompts maestros y aprende a entrenar tus propias campañas publicitarias sin "humo".
+            </p>
+            <div class="hero-actions">
+                <a href="#showroom" class="btn btn-primary">Ver Proyectos & Prompts</a>
+                <a href="#metodologia" class="btn btn-secondary">Aprender el Flujo 3+1</a>
+            </div>
+            
+            <!-- Tech Metrics / Folder Structure Quick View -->
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Marcas Activas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Creaciones IA</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Coherencia Visual</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Folder Structure Explanation -->
+    <section class="structure-banner">
+        <div class="container">
+            <div class="structure-box">
+                <div class="structure-header">
+                    <div class="mac-dot red"></div>
+                    <div class="mac-dot yellow"></div>
+                    <div class="mac-dot green"></div>
+                    <span class="structure-title">Estructura del Proyecto en /Users/makebyjordan/local/myweb2teach/allVideosPhotoIaALL/</span>
+                </div>
+                <div class="structure-body">
+                    <pre><code>allVideosPhotoIaALL/
+├── <span class="folder-all">all/</span>                          <span class="comment"># Bandeja de entrada: logos y creaciones en crudo (intacta)</span>
+├── <span class="folder-marcas">marcas/</span>
+│   ├── <span class="folder-slug">inteligencia-sevilla/</span>     <span class="comment"># Ficha de marca.md + logos oficiales</span>
+│   ├── <span class="folder-slug">vexa/</span>                     <span class="comment"># AI Smart Glasses: logos y especificaciones</span>
+│   └── <span class="folder-slug">forgenex/</span>                 <span class="comment"># Software/CRM: assets y branding en pantalla</span>
+└── <span class="folder-creaciones">creaciones/</span>
+    ├── <span class="folder-slug">reforma-tipo-1/</span>           <span class="comment"># Loft industrial: Imágenes y vídeo antes-durante-después + PROMPTS.md</span>
+    ├── <span class="folder-slug">forgenex/</span>                 <span class="comment"># UGC y CRM modular: renders, videos y prompts ancla</span>
+    ├── <span class="folder-slug">vexa/</span>                     <span class="comment"># Unboxing cinematográfico e imágenes lifestyle</span>
+    └── <span class="folder-shared">_compartido/</span>              <span class="comment"># Actriz UGC base para las tres marcas principales</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showroom Section -->
+    <section id="showroom" class="showroom-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Showroom de Anuncios & Biblioteca de Prompts</h2>
+                <p class="section-subtitle">
+                    Explora los anuncios finales y desglosa el material gráfico (imágenes y vídeos) junto con los prompts en inglés exactos utilizados para crearlos.
+                </p>
+                
+                <!-- Category/Brand Filters -->
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">Todos los Proyectos</button>
+                    <button class="filter-btn" data-filter="reforma">Reforma Tipo 1</button>
+                    <button class="filter-btn" data-filter="forgenex">Forgenex</button>
+                    <button class="filter-btn" data-filter="vexa">Vexa Glasses</button>
+                    <button class="filter-btn" data-filter="sevilla">Inteligencia Sevilla</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project cards will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Methodology Section -->
+    <section id="metodologia" class="methodology-section">
+        <div class="container">
+            <div class="methodology-grid">
+                <div class="methodology-info">
+                    <div class="section-label">EL ARTE DE LA COHERENCIA</div>
+                    <h2 class="section-title">El Flujo Maestro 3+1</h2>
+                    <p>
+                        El principal reto al crear anuncios con Inteligencia Artificial es la <strong>consistencia visual</strong>. Si generas tres clips de vídeo independientes, el fondo, la luz y la fisionomía de los actores cambiarán por completo, arruinando la ilusión.
+                    </p>
+                    <p>
+                        Para resolver esto de forma espectacular, mi flujo de trabajo de estructurado utiliza la técnica <strong>3+1 (3 Imágenes + 1 Vídeo)</strong>:
+                    </p>
+                    
+                    <ul class="methodology-steps">
+                        <li>
+                            <div class="step-icon">1</div>
+                            <div class="step-text">
+                                <strong>Paso 1 — Imagen 1 (Antes):</strong> Genera la imagen inicial del Antes en el generador de imágenes de <a href="https://labs.google/fx/tools/flow" target="_blank" style="color: var(--accent-gold); text-decoration: underline; font-weight: 600;">Google Flow</a> introduciendo el primer prompt.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-icon">2</div>
+                            <div class="step-text">
+                                <strong>Paso 2 — Imagen 2 (Obra) + Referencia:</strong> Genera la imagen de la Obra usando su prompt y adjuntando la <em>Imagen 1 (Antes)</em> generada como <strong>imagen de referencia visual</strong> (Image-to-Image) para obligar a la IA a mantener la consistencia geométrica.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-icon">3</div>
+                            <div class="step-text">
+                                <strong>Paso 3 — Imagen 3 (Después) + Referencia:</strong> Genera la imagen del Después usando su prompt y adjuntando la <em>Imagen 2 (Obra)</em> generada como <strong>imagen de referencia visual</strong> para asegurar la misma composición final.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-icon">🎬</div>
+                            <div class="step-text">
+                                <strong>Paso 4 — Vídeo Final Interpolado:</strong> En el generador de vídeo de Google Flow, introduce el prompt del vídeo y añade las <strong>3 imágenes generadas</strong> como fotogramas clave de referencia (keyframes). La IA de Google Flow interpolará la secuencia manteniendo la coherencia visual al 100%.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="methodology-visual">
+                    <div class="visual-card">
+                        <div class="card-glow"></div>
+                        <h3>Reglas de Oro del Prompt Engineering</h3>
+                        <div class="rule-box">
+                            <div class="rule-tag">Cámara Fija</div>
+                            <p>Especifica siempre la cámara: <code>"shot from a fixed 24mm wide-angle lens at eye level, camera positioned at the entrance"</code>.</p>
+                        </div>
+                        <div class="rule-box">
+                            <div class="rule-tag">Anclas de Luz</div>
+                            <p>Usa una fuente de luz constante de fondo: <code>"large window at the back-left as the only light source"</code>.</p>
+                        </div>
+                        <div class="rule-box">
+                            <div class="rule-tag">Negativos Limpios</div>
+                            <p>Utiliza mayúsculas para excluir elementos residuales: <code>"NO scaffolding, NO tools, NO rubble"</code> en la imagen final.</p>
+                        </div>
+                        <div class="rule-box">
+                            <div class="rule-tag">Texto Publicitario</div>
+                            <p>No intentes meter texto largo en la IA de vídeo (se deforma). Genera el vídeo limpio y añade la tipografía en <strong>CapCut</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Claude Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="skills-intro">
+                <div class="section-label">HERRAMIENTAS E INTELIGENCIA</div>
+                <h2 class="section-title">Biblioteca de Skills Co-Work de Claude</h2>
+                <p class="section-subtitle">
+                    Estas son las directivas e instrucciones especializadas (skills) instaladas en Claude de la ruta <code>/Users/usuario/Library/Application Support/Claude</code>, clasificadas por su función dentro del ecosistema de anuncios.
+                </p>
+            </div>
+
+            <div class="skills-container">
+                <!-- Left Column: Category groups and buttons -->
+                <div class="skills-categories">
+                    
+                    <!-- Core Skills Group -->
+                    <div class="skills-category-group">
+                        <h3 class="skills-category-title"><i class="fa-solid fa-brain"></i> Núcleo del Proyecto (Las 3 principales)</h3>
+                        <div class="skills-list">
+                            <button class="skill-item-btn" data-skill="orquestador-proyecto-anuncios">
+                                <span>orquestador-proyecto-anuncios</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <button class="skill-item-btn" data-skill="ugc-anuncios-ia">
+                                <span>ugc-anuncios-ia</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <button class="skill-item-btn" data-skill="prompt-engineer-instrucciones">
+                                <span>prompt-engineer-instrucciones</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Brand Specific Group -->
+                    <div class="skills-category-group">
+                        <h3 class="skills-category-title"><i class="fa-solid fa-tags"></i> Por Marca / Específicas</h3>
+                        <div class="skills-list">
+                            <button class="skill-item-btn" data-skill="skill-vexa">
+                                <span>skill-vexa</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Flow Support Group -->
+                    <div class="skills-category-group">
+                        <h3 class="skills-category-title"><i class="fa-solid fa-sliders"></i> Apoyo a Flujos Concretos</h3>
+                        <div class="skills-list">
+                            <button class="skill-item-btn" data-skill="generar-fotogramas">
+                                <span>generar-fotogramas</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <button class="skill-item-btn" data-skill="imagenes-3d-scroll">
+                                <span>imagenes-3d-scroll</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Orbiting Group -->
+                    <div class="skills-category-group">
+                        <h3 class="skills-category-title"><i class="fa-solid fa-circle-nodes"></i> Otras Instaladas (Órbita de Negocio)</h3>
+                        <div class="skills-list">
+                            <button class="skill-item-btn" data-skill="gestor-leads-whatsapp">
+                                <span>gestor-leads-whatsapp</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <button class="skill-item-btn" data-skill="prospector-realtime-empresas">
+                                <span>prospector-realtime-empresas</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <button class="skill-item-btn" data-skill="reddit-captacion-neuromarketing">
+                                <span>reddit-captacion-neuromarketing</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <button class="skill-item-btn" data-skill="system-prompt-architect">
+                                <span>system-prompt-architect</span> <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Interactive IDE Editor for SKILL.md -->
+                <div class="skills-viewer-panel">
+                    <div class="viewer-header">
+                        <div class="viewer-tabs">
+                            <div class="viewer-tab">
+                                <i class="fa-regular fa-file-code"></i> <span id="viewer-filename">ninguno.md</span>
+                            </div>
+                        </div>
+                        <button class="copy-btn js-copy-skill" id="copy-skill-btn" style="display: none;">
+                            <i class="fa-regular fa-copy"></i> Copiar Skill
+                        </button>
+                    </div>
+                    <div class="viewer-content" id="viewer-content-area">
+                        <div class="viewer-placeholder">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h3>Visualizador de Skills de Claude</h3>
+                            <p>Haz clic en cualquiera de las skills del menú lateral para cargar e inspeccionar su archivo de especificaciones <code>SKILL.md</code>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training (Formación) Section -->
+    <section id="formacion" class="training-section">
+        <div class="container">
+            <div class="section-header align-center">
+                <div class="section-label">BIBLIOTECA DE APRENDIZAJE</div>
+                <h2 class="section-title">Pequeña Formación sobre Anuncios con IA</h2>
+                <p class="section-subtitle">
+                    Aprende las metodologías publicitarias y de prompting específicas para cada tipo de campaña.
+                </p>
+            </div>
+            
+            <div class="training-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="ugc">Avatares & UGC</button>
+                    <button class="tab-btn" data-tab="unboxing">Unboxing de Producto</button>
+                    <button class="tab-btn" data-tab="kinetic">Kinetic Typography</button>
+                    <button class="tab-btn" data-tab="branding">Branding Integrado</button>
+                </div>
+                
+                <div class="tab-content-container">
+                    <!-- UGC Tab -->
+                    <div class="tab-content active" id="tab-ugc">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Creación de Actrices UGC Realistas</h3>
+                                <p>
+                                    La publicidad UGC (User Generated Content) requiere autenticidad. Los avatares generados por IA a menudo sufren del efecto "valle inquietante" (uncanny valley) debido a iluminaciones perfectas de estudio y retoques excesivos.
+                                </p>
+                                <h4>Claves para el éxito en UGC:</h4>
+                                <ul>
+                                    <li><strong>Prompts negativos estrictos:</strong> En tus prompts de imagen de actriz, añade: <code>"no studio lighting, no retouching, no airbrushed skin, no bokeh, no color grading, natural skin texture"</code>. Esto obliga a la IA a simular una cámara de móvil real.</li>
+                                    <li><strong>Reparto Compartido:</strong> Jordan reutiliza la misma actriz UGC para <em>Forgenex, Vexa e Inteligencia Sevilla</em>. ¿Cómo? Manteniendo su descripción física idéntica en los prompts (<code>"young Spanish female presenter, long dark straight hair, beige cream ribbed knit top"</code>) y cambiando únicamente el contexto o el producto que viste/señala.</li>
+                                    <li><strong>Estructura de Script (24 segundos):</strong>
+                                        <ul>
+                                            <li>0-8s: Gancho al dolor (Problema que sufre el cliente).</li>
+                                            <li>8-18s: Producto + 2 beneficios tangibles.</li>
+                                            <li>18-24s: Llamada a la acción (CTA) casual.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-code-panel">
+                                <div class="panel-header">Estructura del Prompt UGC (Inglés)</div>
+                                <pre><code>A close-up selfie-style photograph, vertical 9:16, of a young Spanish female presenter in her late 20s. She has long dark straight hair, wearing a beige cream ribbed knit top. Natural, slightly imperfect indoor lighting, shot on mobile phone camera, looking directly at camera, soft smile. Raw skin texture with details, realistic lighting, warm office background. --no studio lighting, retouching, airbrushed skin, bokeh, perfect color grade</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Unboxing Tab -->
+                    <div class="tab-content" id="tab-unboxing">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Anuncios de Unboxing Cinematográfico</h3>
+                                <p>
+                                    Para vender productos físicos (como las gafas de Vexa), el "unboxing" es uno de los formatos más persuasivos. Permite al cliente experimentar de manera indirecta el desempaquetado del producto.
+                                </p>
+                                <h4>Claves del Unboxing con IA:</h4>
+                                <ul>
+                                    <li><strong>Flujo de Referencia Secuencial:</strong> Se crea un set de imágenes secuenciales (por ejemplo, el set de 11 fotos de Vexa `1.jpg` a `11.jpg`) donde cada imagen representa un paso del desempaquetado:
+                                        <ol>
+                                            <li>Caja cerrada sobre fondo oscuro.</li>
+                                            <li>Manos retirando el precinto.</li>
+                                            <li>Tapa de la caja levantándose ligeramente.</li>
+                                            <li>Apertura completa revelando el interior.</li>
+                                            <li>Extracción del producto.</li>
+                                        </ol>
+                                    </li>
+                                    <li><strong>Guiado de IA de Vídeo:</strong> Se suben las imágenes en orden como fotogramas clave y se utiliza un prompt de vídeo detallando el movimiento de cámara lenta y la iluminación focalizada (<code>"cinematic slow-motion unboxing, hands revealing the product under a soft spotlight"</code>).</li>
+                                </ul>
+                            </div>
+                            <div class="tab-code-panel">
+                                <div class="panel-header">Prompt de Vídeo Unboxing (Kling/Flow)</div>
+                                <pre><code>Vertical cinematic unboxing video, 9:16. Use the sequence of reference images as structural guides. Hands gently open a premium textured black cardboard box displaying the blue VEXA wing logo. The lid lifts in slow motion, revealing the sleek smart glasses nestled inside. Moody lighting, high contrast, warm spotlight, ultra-detailed textures.</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kinetic Typography Tab -->
+                    <div class="tab-content" id="tab-kinetic">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Kinetic Typography (Formato Favorito de Jordan)</h3>
+                                <p>
+                                    Este formato es ideal para captar la atención de forma instantánea en redes sociales sin necesidad de filmar o renderizar escenas complejas. Consiste en animaciones de texto punchy y dinámicas sobre fondos abstractos.
+                                </p>
+                                <h4>Estructura de Anuncio de 10 Segundos:</h4>
+                                <ul>
+                                    <li><strong>0.0 – 2.5s (Hook):</strong> Pregunta directa al dolor del cliente en texto gigante (ej. ¿Tu CRM es una pesadilla?).</li>
+                                    <li><strong>2.5 – 5.0s (Giro):</strong> Contraste o problema secundario (ej. Horas perdidas en hojas de cálculo).</li>
+                                    <li><strong>5.0 – 7.5s (Solución):</strong> Presentación rápida del servicio (ej. Diseñamos tu software a medida).</li>
+                                    <li><strong>7.5 – 10.0s (Cierre):</strong> End card con el logotipo y llamada a la acción (CTA).</li>
+                                </ul>
+                                <h4>Regla del Proceso (Evitar Deformaciones):</h4>
+                                <p>
+                                    Las IAs de vídeo escriben muy mal el texto largo. Por tanto, el flujo de Jordan es: <strong>generar el fondo animado abstracto (ej. partículas doradas flotando sobre fondo negro tech) y la voz en off con la IA, y luego añadir los rótulos limpios y las animaciones de texto en CapCut</strong>.
+                                </p>
+                            </div>
+                            <div class="tab-code-panel">
+                                <div class="panel-header">Diseño de Rótulos en CapCut</div>
+                                <pre><code>[Rótulo 1 - 0s]: ¿TU CRM ES UNA PESADILLA? 
+(Tipografía blanca, palabra "PESADILLA" en ROJO)
+
+[Rótulo 2 - 2.5s]: MÁS TIEMPO PERDIDO QUE FACTURADO
+(Tipografía blanca, palabra "PERDIDO" en AMARILLO/DORADO)
+
+[Rótulo 3 - 5s]: DISEÑO DE SOFTWARE A MEDIDA
+(Tipografía blanca, palabra "A MEDIDA" en ROJO/CORAL)
+
+[Cierre - 7.5s]: FORGENEX. Desarrollo de CRM.
+(Logotipo + CTA)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Branding Tab -->
+                    <div class="tab-content" id="tab-branding">
+                        <div class="tab-grid">
+                            <div class="tab-text">
+                                <h3>Integración de Branding e Identidad Visual</h3>
+                                <p>
+                                    Un anuncio no vende si no se asocia a la marca. Para integrar logos y colores de forma espectacular sin que parezca un añadido barato:
+                                </p>
+                                <h4>Estrategias de Integración:</h4>
+                                <ul>
+                                    <li><strong>En pantallas físicas de la escena:</strong> En lugar de superponer el logo digitalmente, haz que el prompt de IA genere la pantalla con el branding: <code>"A large TV screen on the office wall displaying the Inteligencia Sevilla dashboard with red and gold charts"</code>.</li>
+                                    <li><strong>En el atrezzo del espacio:</strong> Introduce objetos de marca de forma sutil: <code>"Black coffee mugs with the metallic 'IS' logo resting on the meeting table"</code>.</li>
+                                    <li><strong>End Cards con Coherencia Cromática:</strong> Si las escenas lifestyle de Inteligencia Sevilla son cálidas y en tonos beige, las pantallas finales de cierre usan el universo oscuro de la marca (fondo azul marino/negro con constelaciones doradas y logotipo cromado). Esto separa claramente la parte publicitaria del cierre corporativo.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-code-panel">
+                                <div class="panel-header">Prompt de End Card Corporativa</div>
+                                <pre><code>A premium dark blue and black textured background with a glowing gold network constellation mesh. In the center, a 3D metallic chrome logo spelling 'IS' with internal red circuit lines. The logo has a subtle metallic gleam. Cinematic volumetric lighting, soft red particles floating. Professional brand lockup style. --no text, no letters</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#" class="brand-logo">
+                    <span class="logo-dot crimson"></span>
+                    <span class="logo-dot gold"></span>
+                    Jordan<span class="tech-glow">AI_Ads</span>
+                </a>
+                <p>Evolucionando la publicidad digital a través de prompt engineering y flujos de trabajo con inteligencia artificial generativa.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links-group">
+                    <h4>Navegación</h4>
+                    <a href="#hero">Inicio</a>
+                    <a href="#showroom">Showroom</a>
+                    <a href="#metodologia">Metodología</a>
+                    <a href="#formacion">Formación</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Proyecto</h4>
+                    <a href="file:///Users/makebyjordan/local/myweb2teach/allVideosPhotoIaALL/">Carpeta allVideos...</a>
+                    <a href="#">Catálogo Maestro</a>
+                    <a href="#">Guía de Línea Visual</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Jordan AI Ads. Diseñado con fines de showcase y entrenamiento de prompts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+</html>
