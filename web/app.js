@@ -2,81 +2,26 @@
    Jordan AI Ads Studio — Lógica de Aplicación
    ========================================================================== */
 
-// --- Base de Datos Local de Proyectos (Referenciados Relativamente a web/assets/) ---
-const projects = [
-    {
-        id: 1,
-        title: "Reforma Tipo 1 — Loft Industrial",
-        brand: "Reforma Tipo 1",
-        brandSlug: "reforma",
-        projectPage: "reforma-tipo-1.html",
-        type: "Antes / Obra / Final (Flujo 3+1)",
-        desc: "Timelapse cinemático de reforma integral. Mantiene una cámara fija de 24mm para coordinar la transición de abandono a obra activa y finalmente el render cálido habitable.",
-        thumbnail: "./assets/creaciones/reforma-tipo-1/imagenes/Renovated_loft_finished_interior…_202606190320.jpeg",
-        videoUrl: "./assets/creaciones/reforma-tipo-1/video/Loft_renovation_before_during_after_202606190322.mp4"
-    },
-    {
-        id: 2,
-        title: "Forgenex — CRM Modular Desk 1",
-        brand: "Forgenex",
-        brandSlug: "forgenex",
-        projectPage: "forgenex-crm-desk.html",
-        type: "Caos / Montaje / Orden (Flujo Metáfora)",
-        desc: "Anuncio conceptual de CRM. Muestra un escritorio pasando del desorden caótico de papeles y cables a un montaje modular de pantallas y finalmente a una interfaz limpia con gráficos de CRM.",
-        thumbnail: "./assets/creaciones/forgenex/referencias%20PRO%20para%20video/crm%20modular%20desk%201/3-resultado-Desk_with_CRM_dashboard.jpeg",
-        videoUrl: "./assets/creaciones/forgenex/videos/crm%20modular%20desk%201%20video/Desk_evolving_to_CRM_system_202606190243.mp4"
-    },
-    {
-        id: 3,
-        title: "Forgenex — UGC Presentadora 1",
-        brand: "Forgenex",
-        brandSlug: "forgenex",
-        projectPage: "forgenex-presentadora.html",
-        type: "UGC / Actriz IA",
-        desc: "Vídeo en formato UGC (User Generated Content) con la actriz digital compartida. Presenta la solución de CRM en una oficina moderna, interactuando con una pantalla donde se aprecia el branding corporativo.",
-        thumbnail: "./assets/creaciones/forgenex/oficina%20forgenex%20presentadora%201/imagenes/Presenter_smiling_in_office_202606190306.jpeg",
-        videoUrl: "./assets/creaciones/forgenex/oficina%20forgenex%20presentadora%201/video/Female_presenter_in_office_202606190309.mp4"
-    },
-    {
-        id: 4,
-        title: "Forgenex — UGC Campaña Estrés",
-        brand: "Forgenex",
-        brandSlug: "forgenex",
-        projectPage: "forgenex-stressed-owner.html",
-        type: "UGC Narrativo (Dolor / Solución)",
-        desc: "Campaña publicitaria enfocada a pequeños empresarios. Describe la transición entre el estrés de la contabilidad manual y el alivio del orden que trae consigo la implantación de un sistema de gestión modular.",
-        thumbnail: "./assets/creaciones/forgenex/crm%20negocio%20personas%201/imagenes/Business_owner_smiling_at_desk_202606190255.jpeg",
-        videoUrl: "./assets/creaciones/forgenex/crm%20negocio%20personas%201/video/Business_owner_uses_modular_CRM_202606190257.mp4"
-    },
-    {
-        id: 5,
-        title: "Vexa — AI Smart Glasses Unboxing",
-        brand: "Vexa",
-        brandSlug: "vexa",
-        projectPage: "vexa-unboxing.html",
-        type: "Unboxing & Lifestyle de Producto",
-        desc: "Reveal de producto físico. Combina renders 3D ultra-detallados de las gafas de sol inteligentes con un vídeo cinemático de desempaquetado y un logo reveal brillante sobre fondo negro.",
-        thumbnail: "./assets/creaciones/vexa/imagenes/vexa-andando-modelo-con-gafas3.png",
-        videoUrl: "./assets/creaciones/vexa/videos/unboxing%20vexa%201%20video/WhatsApp%20Video%202026-06-18%20at%2000.14.41.mp4"
-    },
-    {
-        id: 6,
-        title: "Inteligencia Sevilla — Consultoría sin Humo",
-        brand: "Inteligencia Sevilla",
-        brandSlug: "sevilla",
-        projectPage: "sevilla-consultoria.html",
-        type: "Lifestyle Corporativo & Visitas a Negocios",
-        desc: "Campaña de posicionamiento experto. Muestra al equipo de consultoría visitando comercios locales (como peluquerías caninas) y analizando procesos de negocio para implantar IA útil.",
-        thumbnail: "./assets/creaciones/inteligencia-sevilla/imagenes/Woman_pointing_at_TV_202606140550.jpeg",
-        videoUrl: "./assets/creaciones/inteligencia-sevilla/videos/Alithia-no-hacemos-webs-convencionales.mp4"
-    }
-];
+let projects = [];
 
 // --- Inicialización y Renderizado de Tarjetas ---
-document.addEventListener("DOMContentLoaded", () => {
-    renderProjects(projects);
-    setupFilters();
-    setupTrainingTabs();
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const response = await fetch("projects.json");
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+        projects = await response.json();
+        renderProjects(projects);
+        setupFilters();
+        setupTrainingTabs();
+    } catch (error) {
+        console.error("Error loading projects database:", error);
+        const grid = document.getElementById("projects-grid");
+        if (grid) {
+            grid.innerHTML = `<div class="no-projects">Error al cargar la base de datos de proyectos.</div>`;
+        }
+    }
 });
 
 // --- Renderizar Tarjetas en el Grid ---

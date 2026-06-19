@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Sevilla — Desglose de Anuncio IA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    
+    <!-- Custom Page Styles -->
+    <style>
+        .back-nav {
+            margin-top: calc(var(--header-height) + 20px);
+            margin-bottom: 20px;
+        }
+        .project-meta-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .md-viewer {
+            background-color: #0b0b0e;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 24px;
+            max-height: 450px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+        }
+        .md-viewer h1, .md-viewer h2, .md-viewer h3 {
+            color: var(--accent-gold);
+            margin-top: 20px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 6px;
+        }
+        .md-viewer h1:first-child, .md-viewer h2:first-child {
+            margin-top: 0;
+        }
+        .md-viewer p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .md-viewer ul, .md-viewer ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .md-viewer li {
+            margin-bottom: 6px;
+        }
+        .md-viewer code {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #e4e4e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .md-viewer pre {
+            background-color: #050507;
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+        .md-viewer pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            display: block;
+        }
+        .md-tag-badge {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-logo">
+                <span class="logo-dot crimson"></span>
+                <span class="logo-dot gold"></span>
+                Jordan<span class="tech-glow">AI_Ads</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Showroom Principal</a>
+                <a href="../index.html#metodologia">Metodología</a>
+                <a href="../index.html#formacion">Formación</a>
+            </nav>
+            <div class="header-cta">
+                <a href="../index.html" class="btn btn-outline btn-sm">Volver al Showroom</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Back Navigation Link -->
+        <div class="back-nav">
+            <a href="../index.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Showroom
+            </a>
+        </div>
+
+        <div class="project-detail-layout vertical-layout">
+            
+            <!-- Left Column: Media Players & Original Markdown Documents -->
+            <div class="media-column">
+                
+                <!-- Video Player -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-circle-play"></i> Anuncio Vídeo Final Acabado</h3>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <video src="../assets/creaciones/inteligencia-sevilla/videos/Professionals_talking_in_office_202606140605.mp4" controls autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <!-- Reference Image Slider -->
+                
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-regular fa-image"></i> Fotogramas Clave de Referencia (Prompts Ancla)</h3>
+                    <div class="showcase-selector">
+                        <button class="selector-tab active" data-img-src="../assets/creaciones/inteligencia-sevilla/imagenes/Gemini_Generated_Image_wihwxnwihwxnwihw.png">1. Antes</button>
+<button class="selector-tab" data-img-src="../assets/creaciones/inteligencia-sevilla/imagenes/Professionals_and_owner_at_salon_202606140608.jpeg">2. Obra</button>
+<button class="selector-tab" data-img-src="../assets/creaciones/inteligencia-sevilla/imagenes/Woman_using_laptop_at_salon_202606140608.jpeg">3. Después</button>
+
+                    </div>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <img id="detail-active-img" src="../assets/creaciones/inteligencia-sevilla/imagenes/Gemini_Generated_Image_wihwxnwihwxnwihw.png" alt="Fotograma clave">
+                    </div>
+                </div>
+
+                <!-- Markdown Files Showcased -->
+                
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Apoyo Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> creaciones/inteligencia-sevilla/auditoria-oficina-linea-visual-1/prompts/prompts.md</h3>
+                    <div class="md-viewer">
+                        <h1>Auditoría gratuita — Oficina línea visual iS (chico, 3 imágenes + 1 vídeo)</h1>
+<ul>
+<li><strong>Marca:</strong> Inteligencia Sevilla</li>
+<li><strong>Flujo:</strong> 3 imágenes + 1 vídeo (talking-head; 3 momentos del mismo discurso)</li>
+<li><strong>Fecha:</strong> 2026-06-19</li>
+</ul>
+<p>Versión siguiendo la LÍNEA VISUAL aprobada: oficina cálida iS acristalada, TV de fondo con branding iS y dashboard, taza iS, presentador chico de camisa azul marino. 9:16. Cámara fija idéntica en las 3: plano medio frontal UGC, altura de ojos (~1,5 m), composición centrada, TV de marca al fondo como elemento fijo. Incluye la toma A (24s, con discurso completo) y la toma B (10s, versión final adaptada a 10 segundos sin etiquetas de herramienta).</p>
+<p>---</p>
+<h2>Versión A — 24 segundos</h2>
+<h3>Imagen 1 — El gancho · 9:16</h3>
+<pre><code>Hyperrealistic vertical 9:16 corporate UGC photo of a Spanish man, 32 years old, short dark
+hair, light stubble, wearing a fitted navy blue shirt, standing in a modern glass-walled
+consulting office in Seville. Medium shot from a fixed frontal camera at eye level 1.5 meters,
+centered composition. Warm cove LED ceiling lighting plus soft natural daylight, cream and warm
+wood tones, a long dark meeting table with a black "iS" branded coffee mug. On the back wall, a
+large TV screen shows the "iS Inteligencia Sevilla" branding with a clean dashboard. He looks
+directly at camera with an engaging, confident expression, mid-gesture as if opening a
+conversation. Warm clean color grade, natural skin texture, no retouching, not studio-perfect.
+Ultra detailed, 8K, photorealistic, warm editorial corporate style.</code></pre>
+<h3>Imagen 2 — La explicación · 9:16</h3>
+<pre><code>Hyperrealistic vertical 9:16 corporate UGC photo of the same Spanish man, identical 32 years old,
+same short dark hair, same navy blue shirt, exact same fixed frontal camera at eye level 1.5
+meters, same centered composition, same glass-walled Seville office, same warm cove lighting and
+daylight, same dark meeting table with black "iS" mug, same TV on the back wall now clearly
+showing a dashboard titled "Auditoría gratuita" with gold accents. He is mid-explanation, one
+hand gesturing openly toward the TV screen, calm confident expert expression, looking between
+camera and screen. Same warm color grade. Natural skin texture, no retouching. Ultra detailed,
+8K, photorealistic, warm editorial corporate style.</code></pre>
+<h3>Imagen 3 — El cierre / CTA · 9:16</h3>
+<pre><code>Hyperrealistic vertical 9:16 corporate UGC photo of the same Spanish man, identical 32 years old,
+same navy blue shirt, exact same fixed frontal camera at eye level 1.5 meters, same centered
+composition, same glass-walled Seville office, same warm cove lighting and daylight, same dark
+table with black "iS" mug, same "iS Inteligencia Sevilla" branding on the back wall TV. Now he
+has an open, warm, inviting smile, both hands in a welcoming gesture toward camera, confident and
+close as if inviting the viewer. Slightly warmer color grade with gold accents emphasized.
+Natural skin texture, no retouching. Ultra detailed, 8K, photorealistic, warm editorial corporate
+style.</code></pre>
+<h3>Vídeo final · 9:16 (con las 3 imágenes como referencia)</h3>
+<pre><code>Cinematic vertical 9:16 UGC talking-head advertisement, 24 seconds. Use the three reference
+images provided as strict visual anchors — maintain identical man (same face, hair, navy blue
+shirt), identical fixed frontal camera at eye level, identical centered composition, identical
+warm glass-walled Seville office with cove lighting, dark meeting table, black "iS" branded mug
+and the back-wall TV showing "iS Inteligencia Sevilla" branding throughout the entire video.
+
+The man talks directly to camera in a relaxed, confident, trusted-advisor style, with natural
+hand gestures matching the three image moments (opening gesture, explaining toward the TV
+dashboard, warm inviting close). He says, in Spanish:
+
+"¿Sabes cuánto tiempo pierde tu empresa cada semana en tareas que la inteligencia artificial
+podría hacer sola? Casi nadie lo calcula, y ahí se va el dinero. En Inteligencia Sevilla te
+hacemos una auditoría gratuita: analizamos tu negocio y te decimos, sin humo, qué merece la pena
+implementar y qué no. Son tres horas, gratis y sin compromiso. Entra en inteligenciasevilla.com
+y reserva la tuya. Te vas a sorprender."
+
+Male voice, 30-40 years old, Castilian Spanish accent (acento español de España, NOT Latin
+American). Warm, expert but approachable, conversational. Clear medium timbre, natural rhythm
+with genuine inflections, slight emphasis on "gratuita" and "sin humo". Warm color grade with
+gold accents. Photorealistic, cinematic. No text overlays. No music.
+Audio language: Spanish (español de España). All dialogue must be spoken in Spanish.</code></pre>
+<h3>Copy de montaje (textos de superposición)</h3>
+<ul>
+<li>0-8s: "¿Cuánto te cuesta lo que aún haces a mano?"</li>
+<li>8-18s: "Auditoría gratuita · sin humo"</li>
+<li>18-24s: "3 horas · gratis · inteligenciasevilla.com"</li>
+<li>Pantalla final: logo <strong>iS — INTELIGENCIA SEVILLA</strong> sobre negro con acento dorado → "Reserva tu auditoría gratuita".</li>
+</ul>
+<p>---</p>
+<h2>Versión B — 10 segundos (versión final aprobada, sin etiquetas de herramienta)</h2>
+<p>&gt; Ajuste: mismas 3 imágenes que la versión A; guion recortado a 10s (hook + servicio + CTA) y títulos neutros (a veces se usa Gemini o Google Flow).</p>
+<h3>Imagen 1 — El gancho · 9:16</h3>
+<pre><code>Hyperrealistic vertical 9:16 corporate UGC photo of a Spanish man, 32 years old, short dark
+hair, light stubble, wearing a fitted navy blue shirt, standing in a modern glass-walled
+consulting office in Seville. Medium shot from a fixed frontal camera at eye level 1.5 meters,
+centered composition. Warm cove LED ceiling lighting plus soft natural daylight, cream and warm
+wood tones, a long dark meeting table with a black "iS" branded coffee mug. On the back wall a
+large TV screen shows the "iS Inteligencia Sevilla" branding with a clean dashboard. He looks
+directly at camera with an engaging, confident expression, mid-gesture as if opening a
+conversation. Warm clean color grade, natural skin texture, no retouching, not studio-perfect.
+Ultra detailed, 8K, photorealistic, warm editorial corporate style.</code></pre>
+<h3>Imagen 2 — La explicación · 9:16</h3>
+<pre><code>Hyperrealistic vertical 9:16 corporate UGC photo of the same Spanish man, identical 32 years old,
+same short dark hair, same navy blue shirt, exact same fixed frontal camera at eye level 1.5
+meters, same centered composition, same glass-walled Seville office, same warm cove lighting and
+daylight, same dark meeting table with black "iS" mug, same back-wall TV now clearly showing a
+dashboard titled "Auditoría gratuita" with gold accents. He is mid-explanation, one hand
+gesturing openly toward the TV screen, calm confident expert expression, looking between camera
+and screen. Same warm color grade. Natural skin texture, no retouching. Ultra detailed, 8K,
+photorealistic, warm editorial corporate style.</code></pre>
+<h3>Imagen 3 — El cierre / CTA · 9:16</h3>
+<pre><code>Hyperrealistic vertical 9:16 corporate UGC photo of the same Spanish man, identical 32 years old,
+same navy blue shirt, exact same fixed frontal camera at eye level 1.5 meters, same centered
+composition, same glass-walled Seville office, same warm cove lighting and daylight, same dark
+table with black "iS" mug, same "iS Inteligencia Sevilla" branding on the back-wall TV. Now he
+has an open, warm, inviting smile, both hands in a welcoming gesture toward camera, confident and
+close as if inviting the viewer. Slightly warmer color grade with gold accents emphasized.
+Natural skin texture, no retouching. Ultra detailed, 8K, photorealistic, warm editorial corporate
+style.</code></pre>
+<h3>Vídeo final · 9:16 · 10 segundos (con las 3 imágenes como referencia)</h3>
+<pre><code>Cinematic vertical 9:16 UGC talking-head advertisement, 10 seconds total. Use the three
+reference images provided as strict visual anchors — maintain identical man (same face, hair,
+navy blue shirt), identical fixed frontal camera at eye level, identical centered composition,
+identical warm glass-walled Seville office with cove lighting, dark meeting table, black "iS"
+branded mug and the back-wall TV showing "iS Inteligencia Sevilla" branding throughout.
+
+The man talks directly to camera in a relaxed, confident, trusted-advisor style, with natural
+hand gestures: opening gesture (0-3s), gesturing toward the TV dashboard (3-7s), warm inviting
+close toward camera (7-10s). He says, in Spanish:
+
+"¿Cuánto tiempo pierde tu empresa en tareas que la IA podría hacer sola? En Inteligencia Sevilla
+te hacemos una auditoría gratuita, sin humo. Reserva en inteligenciasevilla.com."
+
+Male voice, 30-40 years old, Castilian Spanish accent (acento español de España, NOT Latin
+American). Warm, expert but approachable, conversational, slightly brisk pace to fit 10 seconds.
+Slight emphasis on "gratuita" and "sin humo". Warm color grade with gold accents. Photorealistic,
+cinematic. No text overlays. No music.
+Audio language: Spanish (español de España). All dialogue must be spoken in Spanish.</code></pre>
+<h3>Copy de montaje (10s)</h3>
+<ul>
+<li>0-3s: "¿Cuánto te cuesta hacerlo a mano?"</li>
+<li>3-7s: "Auditoría gratuita · sin humo"</li>
+<li>7-10s: "Gratis · inteligenciasevilla.com"</li>
+<li>Pantalla final: logo <strong>iS — INTELIGENCIA SEVILLA</strong> sobre negro con acento dorado → "Reserva tu auditoría gratuita".</li>
+</ul>
+                    </div>
+                </div>
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Apoyo Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> creaciones/inteligencia-sevilla/visita-cliente-peluqueria-canina/prompts/prompts.md</h3>
+                    <div class="md-viewer">
+                        <h1>Visita a cliente — Testimonio peluquería canina (CRM) (3 imágenes + 1 vídeo)</h1>
+<ul>
+<li><strong>Marca:</strong> Inteligencia Sevilla</li>
+<li><strong>Flujo:</strong> 3 imágenes + 1 vídeo (formato "visita a cliente" / testimonial)</li>
+<li><strong>Fecha:</strong> 2026-06-19</li>
+</ul>
+<p>Una persona de IS (camisa azul marino) visita una peluquería canina una semana después de implementar el CRM; la dueña cuenta lo contenta que está. 9:16, 10 segundos, sin etiquetas de herramienta. (Versión final corregida a UNA sola persona de IS.) Cámara fija de escena: plano medio-general estable de la recepción, 9:16, luz cálida natural.</p>
+<h2>Imagen 1 — La llegada · 9:16</h2>
+<pre><code>Hyperrealistic vertical 9:16 photo inside a warm, bright dog-grooming salon in Seville (reception
+area with a wooden counter, grooming tools, shelves with pet products, a small dog on the
+counter). One Spanish man, 30-35 years old, short dark hair, wearing a fitted navy blue shirt, is
+entering through the glass front door, friendly and professional. Behind the counter, the salon
+owner — a Spanish woman, 35-40, wearing a work apron over casual clothes — smiles and greets him
+warmly. Medium-wide shot from a fixed frontal camera at eye level, centered composition. Warm
+natural daylight through the shop window, cozy inviting color grade. A tablet showing an "iS
+Inteligencia Sevilla" CRM dashboard rests on the counter. Natural skin texture, candid real
+moment, no retouching. Ultra detailed, 8K, photorealistic, warm editorial style.</code></pre>
+<h2>Imagen 2 — El testimonio · 9:16</h2>
+<pre><code>Hyperrealistic vertical 9:16 photo inside the same dog-grooming salon, identical reception area,
+exact same fixed frontal camera at eye level, same centered composition, same warm daylight. The
+salon owner (same woman, work apron) stands behind the counter, happily showing and pointing at a
+tablet displaying a custom dog-grooming CRM with sections "Citas", "Mascotas" and "Clientes",
+gold accents and the iS logo. The single navy-shirted IS man stands beside her, looking at the
+screen and nodding, pleased. The owner has an enthusiastic, satisfied expression as she talks.
+Same cozy warm color grade. Natural skin texture, candid, no retouching. Ultra detailed, 8K,
+photorealistic, warm editorial style.</code></pre>
+<h2>Imagen 3 — El cierre · 9:16</h2>
+<pre><code>Hyperrealistic vertical 9:16 photo inside the same dog-grooming salon, identical reception area,
+exact same fixed frontal camera at eye level, same centered composition, same warm daylight. The
+salon owner and the single IS man share a warm, genuine moment — smiling, the owner gesturing
+happily, a friendly handshake or relaxed laughter, the small dog visible on the counter. Trust
+and satisfaction in the scene. Slightly warmer color grade with soft gold tones. Natural skin
+texture, candid, no retouching. Ultra detailed, 8K, photorealistic, warm editorial style.</code></pre>
+<h2>Vídeo final · 9:16 · 10 segundos (con las 3 imágenes como referencia)</h2>
+<pre><code>Cinematic vertical 9:16 testimonial advertisement, 10 seconds total. Use the three reference
+images provided as strict visual anchors — maintain identical dog-grooming salon, identical
+characters (one navy-shirted IS man and the woman owner in a work apron), identical fixed frontal
+camera at eye level, identical centered composition and warm daylight throughout.
+
+Sequence: 0-3s the IS man enters through the front door and the owner greets him warmly; 3-8s the
+owner, behind the counter, happily shows the tablet with the dog-grooming CRM and speaks to him;
+7-10s warm closing moment, smiles and a handshake. Natural realistic motion.
+
+The salon owner speaks directly and warmly, in Spanish:
+"Desde que tengo el CRM de Inteligencia Sevilla controlo todas las citas y la ficha de cada
+mascota. No se me escapa ni un cliente, ¡me ha cambiado el día a día!"
+
+Female voice, 35-45 years old, Castilian Spanish accent (acento español de España, NOT Latin
+American). Warm, genuine, happy and grateful, conversational, slightly brisk to fit 10 seconds.
+Natural ambient salon sound feel. Warm color grade with soft gold tones. Photorealistic,
+cinematic. No text overlays. No music.
+Audio language: Spanish (español de España). All dialogue must be spoken in Spanish.</code></pre>
+<h2>Copy de montaje (10s)</h2>
+<ul>
+<li>0-3s: "Una semana después de implementar su CRM…"</li>
+<li>3-7s: "Todas las citas y fichas, bajo control"</li>
+<li>7-10s: "Inteligencia Sevilla · CRM a medida"</li>
+<li>Pantalla final: logo <strong>iS — INTELIGENCIA SEVILLA</strong> sobre negro con acento dorado → "Tu CRM a medida, también para tu peluquería canina".</li>
+</ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Prompts, CapCut instructions, & Custom Training -->
+            <div class="details-column">
+                <div class="project-meta-box">
+                    <span class="card-brand">Inteligencia Sevilla</span>
+                    <h2 class="card-title" style="font-size: 1.8rem; margin-bottom: 14px;">Showroom y Metodología</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        Campaña publicitaria generada con Inteligencia Artificial utilizando la técnica 3+1 y consistencia visual.
+                    </p>
+                </div>
+
+                <!-- Prompts List -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-code"></i> Fórmulas de Prompts Utilizadas</h3>
+                    
+                    <div class="prompt-panel">
+                        <div class="prompt-content">
+                            <p style="color: var(--text-muted);">No se encontraron prompts estructurados en código. Lee los ficheros Markdown adjuntos para estudiar la campaña.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CapCut Guide -->
+                
+
+                <!-- Educational Section -->
+                <div class="project-meta-box">
+                    <h4 class="detail-training-title"><i class="fa-solid fa-graduation-cap"></i> Lecciones de este Proyecto</h4>
+                    <div class="detail-training-body">
+                        <p>Este proyecto representa la técnica de **consistencia visual** guiada por referencias cruzadas.</p>
+                        <ul>
+                            <li><strong>Coherencia de Estructura:</strong> Se preservan los elementos tridimensionales fijos de fondo usando guías de imagen en Google Flow.</li>
+                            <li><strong>Postproducción:</strong> El vídeo se renderiza limpio y el texto publicitario y la música se montan externamente en CapCut.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Jordan AI Ads. Diseñado con fines de entrenamiento y showcase de prompts.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Interactive Image Slider
+        const tabs = document.querySelectorAll('.selector-tab');
+        const activeImg = document.getElementById('detail-active-img');
+
+        if (tabs && activeImg) {
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    activeImg.src = tab.getAttribute('data-img-src');
+                });
+            });
+        }
+
+        // Copy to clipboard actions
+        const copyBtns = document.querySelectorAll('.js-copy-prompt');
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const text = decodeURIComponent(btn.getAttribute('data-text'));
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Copiado!`;
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

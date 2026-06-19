@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vexa — Desglose de Anuncio IA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    
+    <!-- Custom Page Styles -->
+    <style>
+        .back-nav {
+            margin-top: calc(var(--header-height) + 20px);
+            margin-bottom: 20px;
+        }
+        .project-meta-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .md-viewer {
+            background-color: #0b0b0e;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 24px;
+            max-height: 450px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+        }
+        .md-viewer h1, .md-viewer h2, .md-viewer h3 {
+            color: var(--accent-gold);
+            margin-top: 20px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 6px;
+        }
+        .md-viewer h1:first-child, .md-viewer h2:first-child {
+            margin-top: 0;
+        }
+        .md-viewer p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .md-viewer ul, .md-viewer ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .md-viewer li {
+            margin-bottom: 6px;
+        }
+        .md-viewer code {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #e4e4e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .md-viewer pre {
+            background-color: #050507;
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+        .md-viewer pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            display: block;
+        }
+        .md-tag-badge {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-logo">
+                <span class="logo-dot crimson"></span>
+                <span class="logo-dot gold"></span>
+                Jordan<span class="tech-glow">AI_Ads</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Showroom Principal</a>
+                <a href="../index.html#metodologia">Metodología</a>
+                <a href="../index.html#formacion">Formación</a>
+            </nav>
+            <div class="header-cta">
+                <a href="../index.html" class="btn btn-outline btn-sm">Volver al Showroom</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Back Navigation Link -->
+        <div class="back-nav">
+            <a href="../index.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Showroom
+            </a>
+        </div>
+
+        <div class="project-detail-layout vertical-layout">
+            
+            <!-- Left Column: Media Players & Original Markdown Documents -->
+            <div class="media-column">
+                
+                <!-- Video Player -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-circle-play"></i> Anuncio Vídeo Final Acabado</h3>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <video src="../assets/creaciones/vexa/videos/vexa-andando-modelo-con-gafas2.mp4" controls autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <!-- Reference Image Slider -->
+                
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-regular fa-image"></i> Fotogramas Clave de Referencia (Prompts Ancla)</h3>
+                    <div class="showcase-selector">
+                        <button class="selector-tab active" data-img-src="../assets/creaciones/vexa/imagenes/Gemini_Generated_Image_3zmozy3zmozy3zmo.png">1. Antes</button>
+<button class="selector-tab" data-img-src="../assets/creaciones/vexa/imagenes/Gemini_Generated_Image_dymjatdymjatdymj.png">2. Obra</button>
+<button class="selector-tab" data-img-src="../assets/creaciones/vexa/imagenes/Gemini_Generated_Image_2nup052nup052nup.png">3. Después</button>
+
+                    </div>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <img id="detail-active-img" src="../assets/creaciones/vexa/imagenes/Gemini_Generated_Image_3zmozy3zmozy3zmo.png" alt="Fotograma clave">
+                    </div>
+                </div>
+
+                <!-- Markdown Files Showcased -->
+                
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Apoyo Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> creaciones/vexa/unboxing vexa 1/prompts/prompts.md</h3>
+                    <div class="md-viewer">
+                        <h1>Prompts — Unboxing VEXA 1</h1>
+<ul>
+<li><strong>Set:</strong> unboxing vexa 1</li>
+<li><strong>Marca:</strong> VEXA (gafas inteligentes con IA)</li>
+<li><strong>Flujo:</strong> Fotos de referencia → vídeo de unboxing (Google Flow / Veo, 9:16) + imágenes de producto con logo</li>
+<li><strong>Fecha:</strong> sesión "Unboxing video prompt"</li>
+</ul>
+<p>Contexto: anuncio de unboxing de las gafas VEXA — manos abriendo una caja negra mate con el logo VEXA (emblema alado azul "VF" + wordmark "VEXA" + "AI SMART GLASSES"), sacando las gafas blancas mate de lentes espejadas rojo-naranja. Audio solo ambiente, sin música ni voz. Las referencias de imagen del set están en <code>referencias PRO para video/unboxing vexa 1/</code> (fotos 1-11) y los vídeos generados en <code>videos/unboxing vexa 1 video/</code>.</p>
+<p>---</p>
+<h2>Vídeo unboxing · 9:16 — versión inicial (con logos integrados)</h2>
+<pre><code>Vertical 9:16 cinematic unboxing video, single continuous handheld POV shot from above looking down at a white table. Soft natural indoor lighting, shallow depth of field, realistic textures. A pair of hands slowly unboxes a premium matte black product box. On the lid is the brand logo: a glowing blue gradient winged "VF" emblem above the wordmark "VEXA" in clean black letters, with the small tagline "AI SMART GLASSES" underneath. The hands lift the magnetic lid, revealing an orange interior tray. They take out a black drawstring fabric pouch, loosen the cord, and slide out a pair of modern smart sunglasses: matte white frames with vivid red-to-orange mirrored lenses and tiny speaker holes near the hinges. On the side temple of the glasses, the same blue winged "VF" emblem is printed/engraved as a small brand mark. The hands turn the glasses gently to catch the light on the reflective lenses and to show the logo on the temple, then set them down. They also reveal the USB magnetic charging cable and a small warranty card inside the tray. Smooth, calm pacing. Macro detail on the lenses, the frame, and the logos. No people speaking, no faces, only hands. Aspect ratio: 9:16 vertical. AUDIO: ambient diegetic sound only — the soft crinkle of plastic wrap, cardboard sliding, the magnetic lid clicking, the fabric pouch rustling, the light tap of the glasses on the table, gentle hand movements. Quiet room tone. NO music, NO voiceover, NO narration, NO sound effects added — only the natural sounds of the unboxing itself.</code></pre>
+<p>Nota de ajuste: este prompt completo NO funcionaba bien en Flow — mete 5-6 acciones en un clip de ~8s y Veo lo ignora o lo rechaza. Usar la versión corta (Opción A) o, mejor, los 3 clips encadenados (Opción B) de abajo. Subir los dos PNG de logo como imágenes de referencia, porque Veo deforma texto/símbolos pequeños.</p>
+<p>---</p>
+<h2>Vídeo unboxing · 9:16 — Opción A (clip único, ~8s, formato Flow)</h2>
+<p>&gt; Reescritura para que Flow lo digiera: escena única, una acción clara, frase de cámara + frase de audio separada. (El prompt corto exacto quedó guardado en el archivo de la sesión; estructura: "Vertical 9:16" al inicio + una sola acción + línea de audio "ambient diegetic sound only — … NO music, NO voiceover".)</p>
+<p>Nota de ajuste: una acción por clip, 3-5 frases, "Vertical 9:16" al inicio, línea de audio separada (solo sonido ambiente).</p>
+<p>---</p>
+<h2>Vídeo unboxing · 9:16 — Opción B (RECOMENDADA: 3 clips encadenados)</h2>
+<p>&gt; 3 clips, una sola acción cada uno, repitiendo siempre el bloque de audio ambiente:</p>
+<p>&gt; 1. Abrir la caja (manos levantan la tapa magnética → bandeja naranja).</p>
+<p>&gt; 2. Sacar las gafas de la funda (aflojar el cordón → deslizar las gafas blancas).</p>
+<p>&gt; 3. Macro de marca y lentes (giro de la mano mostrando el emblema en la patilla y las lentes espejadas).</p>
+<p>Nota de ajuste: encadenar los 3 clips de ~8s repitiendo el bloque de audio. Reglas: "Vertical 9:16" al inicio de cada clip + línea de audio "ambient diegetic sound only … NO music, NO voiceover".</p>
+<p>---</p>
+<h2>Imagen · producto con logo en la patilla (misma posición)</h2>
+<p>&gt; Se pasa a la IA: foto 11 (las gafas) como Imagen 1 + el emblema alado azul "VF" como Imagen 2.</p>
+<pre><code>Use Image 1 (the white-framed sunglasses with red-orange mirrored lenses) as the base.
+Use Image 2 (the blue winged "VF" emblem) as a logo.
+
+Place the blue winged emblem from Image 2 onto the side temple (arm) of the
+sunglasses, near the hinge, as a small printed/engraved brand mark. Keep the
+emblem's exact shape, blue gradient and glow. Make it follow the angle and
+curve of the temple realistically, with correct perspective, lighting and a
+subtle reflection on the glossy white frame.
+
+Keep everything else from Image 1 identical: same glasses, same white matte
+frame, same red-orange mirrored lenses, same background, same lighting and
+shadows. Photorealistic, high detail, no other changes.</code></pre>
+<p>Nota de ajuste: subir las imágenes en el mismo orden que se nombran (Imagen 1 = gafas, Imagen 2 = logo). El emblema queda mejor pequeño, en la patilla cerca de la bisagra.</p>
+<p>---</p>
+<h2>Imagen · producto con logo en la patilla (nueva posición, ángulo 3/4)</h2>
+<p>&gt; Se pasa a la IA: foto 11 (las gafas) como Imagen 1 + el emblema alado azul "VF" como Imagen 2.</p>
+<pre><code>Use Image 1 (the white-framed sunglasses with red-orange mirrored lenses) as
+the product reference. Use Image 2 (the blue winged "VF" emblem) as a logo.
+
+Recreate the SAME sunglasses from Image 1 — same matte white frame, same
+red-orange mirrored lenses — but in a NEW position: a side / three-quarter
+angle that clearly shows the temple (arm) of the glasses, with the temples
+open. The temple must be fully visible and in focus.
+
+On that visible temple, near the hinge, place the blue winged emblem from
+Image 2 as a small printed/engraved brand mark. Keep the emblem's exact
+shape, blue gradient and glow, following the angle and curve of the temple
+with correct perspective, lighting and a subtle reflection on the glossy
+white frame.
+
+Photorealistic product photo, clean soft studio lighting, shallow depth of
+field, neutral background, high detail. Keep the glasses design identical to
+Image 1 — only change the camera angle and add the logo on the temple.</code></pre>
+<p>Nota de ajuste: pide un ángulo lateral / tres cuartos con las patillas abiertas para que la patilla (y la marca) se vean bien, manteniendo idénticas las gafas de la foto 11.</p>
+<p>---</p>
+<h2>Notas de producción (montaje)</h2>
+<ul>
+<li>Los logos los aporta el usuario como PNG: emblema alado azul "VF" (para la patilla) y logo completo "VEXA — AI SMART GLASSES" (para la caja).</li>
+<li>Para fidelidad de logos/texto: subirlos como imágenes de referencia en Flow, o incrustarlos en postproducción si la IA los deforma.</li>
+<li>Audio en TODOS los clips: solo sonido diegético del propio unboxing. Sin música, sin voz en off, sin efectos añadidos.</li>
+</ul>
+                    </div>
+                </div>
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Apoyo Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> creaciones/vexa/web inmersion 3d/prompts/prompts.md</h3>
+                    <div class="md-viewer">
+                        <h1>Prompts — Web Inmersión 3D (VEXA Inmersion 3D)</h1>
+<ul>
+<li><strong>Set:</strong> web inmersion 3d</li>
+<li><strong>Marca:</strong> VEXA Inmersion 3D (vexainmersion3d, marca comercial de Inteligencia Sevilla SL)</li>
+<li><strong>Flujo:</strong> Landing/web scroll-down construida con código HTML/CSS/JS + skill de diseño (canvas-design) + fotogramas de vídeo subidos por el usuario. NO se usaron generadores de imagen/vídeo IA con prompts copiables (salvo el hero, generado por la skill de diseño).</li>
+<li><strong>Fecha:</strong> sesiones "Vexainmersion3d web scroll" y "Vexa Inmersion 3D scroll website"</li>
+</ul>
+<p>Contexto: web inmersiva con efecto scroll-down sobre fotogramas de vídeo (Castillo de Gozmán = 1404 frames; Digitalización Histórica = 490 frames). El usuario aportó los vídeos y las imágenes reales; el hero lo generó la IA con la skill canvas-design (filosofía de diseño "Chromatic Dimensional Breach", paleta púrpura/oscuro). Por eso, el único "prompt" maestro real es el brief de la web que dio el usuario, recogido abajo verbatim.</p>
+<p>---</p>
+<h2>Brief maestro de la web (instrucción del usuario · verbatim)</h2>
+<pre><code>los estilos, paleta de colores, tipografias y demas lo coges de la imagen que te paso de referencia de una web que me gusta
+
+el contenido quiero que lo crees tu segun lo que te digo de que va esta empresa: vexainmersion3d se dedica a crear tours, recreaciones y desarrollos en 3D, para empresas, ayuntamientos, además de administraciones, museos, club deportivos y demas opciones
+
+creando recreaciones historicas, mapeando lugares existentes historicos y ademas pudiendo recrear dichos lugares en la antiguedad, como a empresas que quieren ofrecer a sus clientes sus espacios, visiones y productos de forma visualmente en 3D, adpatando los diseños y desarrollos a dispositivos como ordenadores, tablets y moviles , como para gafas de realidad virtual, realidad aumentada y realidad mixta. incluso para pantallas de gran formato donde la visualizacion es todavia mas espectacular y como no en pantallas dinamicas tactiles e inclusivas.
+
+tambien estamos especializados en la creacion de el contenido adaptado para personas con alguna discapacidad como vision entre otras que adaptamos para que puedan ver, oir y sentir como cualquier persona. ademas que es algo que apoyamos enormemente y expresamos a nuestros clientes para que sea una opcion obligatoria dando inclusion a todas las personas
+
+quiero que empiece la web con un hero espectacular (crea tu la imagen) a partir de la segunda y tercera seccion al lado incluyas digitalizacion historica en formato 9:16 y despues al finalizar añadas una seccion con fondo plano y despues ya en el background añadas el efecto scroll down de castillo de gozman incluyendo mas información hasta el final , finalizando con unaseccion de contacto y un footer amplico añadiendio las subpaginas de terminos y condiciones, politica de privacidad y aviso legas entre otras</code></pre>
+<p>Nota de ajuste: estilos/paleta/tipografía se toman de una imagen de referencia que adjuntó el usuario; el contenido lo redacta la IA a partir de la descripción de la empresa. El hero lo genera la IA ("crea tu la imagen"). Estructura pedida: hero → secciones 2-3 con Digitalización Histórica en 9:16 → sección de fondo plano → background scroll-down de Castillo de Gozmán → contacto → footer amplio con subpáginas legales.</p>
+<p>---</p>
+<h2>Hero · imagen generada por la IA (skill canvas-design)</h2>
+<p>&gt; No hubo prompt de texto copiable para un generador externo. La IA creó el hero con la skill de diseño, definiendo una filosofía visual:</p>
+<pre><code>Filosofía de diseño: "Chromatic Dimensional Breach"
+Hero espectacular (1920x1080) con geometría 3D
+Paleta de colores púrpura/oscuro (referencia "AI-Powered Design")
+Animaciones CSS fluidas y modernas</code></pre>
+<p>Nota de ajuste: el hero es código + arte generado por la skill, no un prompt para Midjourney/Flow. Para regenerarlo se reutiliza la skill canvas-design con esta filosofía y paleta.</p>
+<p>---</p>
+<h2>Secciones con vídeo / scroll-down (no son prompts de IA, son assets del usuario)</h2>
+<ul>
+<li><strong>Digitalización Histórica</strong> — vídeo en 9:16, segmentado en 490 fotogramas, integrado en las secciones 2-3.</li>
+<li><strong>Castillo de Gozmán</strong> — vídeo de fondo con efecto scroll-down (300vh), segmentado en 1404 fotogramas, hasta el final de la página.</li>
+</ul>
+<p>Nota: estos vídeos los subió el usuario y se procesaron en frames para el efecto scroll; no se generaron con prompts de IA.</p>
+<p>---</p>
+<h2>Datos / copy de montaje (español de España)</h2>
+<ul>
+<li>Titular legal: <strong>Inteligencia Sevilla SL</strong> · CIF <strong>B88763818</strong>.</li>
+<li>Mención obligatoria en páginas legales: *"vexainmersion3d.com es una marca comercial de Inteligencia Sevilla"*.</li>
+<li>Dirección/contacto: Betis 3, Alcolea del Río, Sevilla · 601 86 96 68 / 624 744 387 · info@vexainmersion3d.es.</li>
+<li>Formulario → envía a <strong>proyectos@vexainmersion3d.es</strong> (vía Formspree).</li>
+<li>Navbar: logo simple (dark mode transparente) + texto <strong>"INMERSION 3D"</strong> en tipografía <strong>Orbitron</strong> (Google Fonts), color turquesa.</li>
+<li>Botón WhatsApp → https://chat.whatsapp.com/F1JMrsnU5GoE2oYUkZW3P3?mode=gi_t</li>
+<li>Subpáginas: términos y condiciones, política de privacidad, aviso legal.</li>
+</ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Prompts, CapCut instructions, & Custom Training -->
+            <div class="details-column">
+                <div class="project-meta-box">
+                    <span class="card-brand">Vexa</span>
+                    <h2 class="card-title" style="font-size: 1.8rem; margin-bottom: 14px;">Showroom y Metodología</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        Campaña publicitaria generada con Inteligencia Artificial utilizando la técnica 3+1 y consistencia visual.
+                    </p>
+                </div>
+
+                <!-- Prompts List -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-code"></i> Fórmulas de Prompts Utilizadas</h3>
+                    
+                    <div class="prompt-panel">
+                        <div class="prompt-content">
+                            <p style="color: var(--text-muted);">No se encontraron prompts estructurados en código. Lee los ficheros Markdown adjuntos para estudiar la campaña.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CapCut Guide -->
+                
+
+                <!-- Educational Section -->
+                <div class="project-meta-box">
+                    <h4 class="detail-training-title"><i class="fa-solid fa-graduation-cap"></i> Lecciones de este Proyecto</h4>
+                    <div class="detail-training-body">
+                        <p>Este proyecto representa la técnica de **consistencia visual** guiada por referencias cruzadas.</p>
+                        <ul>
+                            <li><strong>Coherencia de Estructura:</strong> Se preservan los elementos tridimensionales fijos de fondo usando guías de imagen en Google Flow.</li>
+                            <li><strong>Postproducción:</strong> El vídeo se renderiza limpio y el texto publicitario y la música se montan externamente en CapCut.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Jordan AI Ads. Diseñado con fines de entrenamiento y showcase de prompts.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Interactive Image Slider
+        const tabs = document.querySelectorAll('.selector-tab');
+        const activeImg = document.getElementById('detail-active-img');
+
+        if (tabs && activeImg) {
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    activeImg.src = tab.getAttribute('data-img-src');
+                });
+            });
+        }
+
+        // Copy to clipboard actions
+        const copyBtns = document.querySelectorAll('.js-copy-prompt');
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const text = decodeURIComponent(btn.getAttribute('data-text'));
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Copiado!`;
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

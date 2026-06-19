@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgenex — Desglose de Anuncio IA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    
+    <!-- Custom Page Styles -->
+    <style>
+        .back-nav {
+            margin-top: calc(var(--header-height) + 20px);
+            margin-bottom: 20px;
+        }
+        .project-meta-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .md-viewer {
+            background-color: #0b0b0e;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            padding: 24px;
+            max-height: 450px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+        }
+        .md-viewer h1, .md-viewer h2, .md-viewer h3 {
+            color: var(--accent-gold);
+            margin-top: 20px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 6px;
+        }
+        .md-viewer h1:first-child, .md-viewer h2:first-child {
+            margin-top: 0;
+        }
+        .md-viewer p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .md-viewer ul, .md-viewer ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .md-viewer li {
+            margin-bottom: 6px;
+        }
+        .md-viewer code {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #e4e4e7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .md-viewer pre {
+            background-color: #050507;
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+        .md-viewer pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            display: block;
+        }
+        .md-tag-badge {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand-logo">
+                <span class="logo-dot crimson"></span>
+                <span class="logo-dot gold"></span>
+                Jordan<span class="tech-glow">AI_Ads</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html">Showroom Principal</a>
+                <a href="../index.html#metodologia">Metodología</a>
+                <a href="../index.html#formacion">Formación</a>
+            </nav>
+            <div class="header-cta">
+                <a href="../index.html" class="btn btn-outline btn-sm">Volver al Showroom</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Back Navigation Link -->
+        <div class="back-nav">
+            <a href="../index.html" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Showroom
+            </a>
+        </div>
+
+        <div class="project-detail-layout vertical-layout">
+            
+            <!-- Left Column: Media Players & Original Markdown Documents -->
+            <div class="media-column">
+                
+                <!-- Video Player -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-circle-play"></i> Anuncio Vídeo Final Acabado</h3>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <video src="../assets/creaciones/forgenex/videos/forgenexavatar1.mp4" controls autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <!-- Reference Image Slider -->
+                
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-regular fa-image"></i> Fotogramas Clave de Referencia (Prompts Ancla)</h3>
+                    <div class="showcase-selector">
+                        <button class="selector-tab active" data-img-src="../assets/creaciones/forgenex/oficina%20forgenex%20presentadora%201/imagenes/Presenter_gesturing_at_CRM_dashb%E2%80%A6_202606190306.jpeg">1. Antes</button>
+<button class="selector-tab" data-img-src="../assets/creaciones/forgenex/oficina%20forgenex%20presentadora%201/imagenes/Presenter_smiling_in_office_202606190306.jpeg">2. Obra</button>
+<button class="selector-tab" data-img-src="../assets/creaciones/forgenex/oficina%20forgenex%20presentadora%201/imagenes/Female_presenter_in_office_202606190305.jpeg">3. Después</button>
+
+                    </div>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <img id="detail-active-img" src="../assets/creaciones/forgenex/oficina%20forgenex%20presentadora%201/imagenes/Presenter_gesturing_at_CRM_dashb%E2%80%A6_202606190306.jpeg" alt="Fotograma clave">
+                    </div>
+                </div>
+
+                <!-- Markdown Files Showcased -->
+                
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Apoyo Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> creaciones/forgenex/oficina forgenex presentadora 1/prompts/prompts.md</h3>
+                    <div class="md-viewer">
+                        <h1>Pack de prompts — oficina forgenex presentadora 1</h1>
+<ul>
+<li><strong>Marca:</strong> Forgenex</li>
+<li><strong>Flujo:</strong> 3 imágenes + 1 vídeo (9:16, 10s)</li>
+<li><strong>Fecha:</strong> 2026-06-19</li>
+<li><strong>Herramientas:</strong> imágenes en ChatGPT Imagen / Midjourney / DALL-E · vídeo en Google Flow / Kling</li>
+</ul>
+<p>Misma línea (CRM modular, a medida, asequible) con una presentadora (la actriz compartida: melena oscura, top canalé crema, pantalón beige) hablando a cámara en la oficina de Forgenex con el equipo trabajando en sus ordenadores detrás. Cámara fija: plano medio a la altura de los ojos, presentadora centrada en primer plano, open-plan con branding coral de Forgenex en pantalla de pared al fondo, luz de ventana. Grade cálido-profesional coherente en los 3.</p>
+<p>---</p>
+<pre><code>Imagen 1 — Hook / la presentadora habla · 9:16
+Hyperrealistic vertical 9:16 advertising photo inside a modern Forgenex office (open-plan, warm wood and white, a large wall monitor showing the coral-red "forgenex" branding). A friendly female presenter with long dark hair, wearing a cream ribbed knit top and beige trousers, stands centered in the foreground looking and talking directly to the camera with a confident warm expression, one hand gesturing naturally. Behind her, softly blurred, a small team of 2–3 colleagues work focused at their computers. Shot from a fixed camera at eye level, 2 meters back, medium shot, centered composition, large window providing soft natural light on the left. Warm professional color grade. Hyperrealistic, natural skin texture and pores, candid corporate-lifestyle feel, ultra detailed, 8K, photorealistic.</code></pre>
+<p>Nota: si cambia su aspecto, fija "same woman, long dark hair, cream ribbed knit top, beige trousers".</p>
+<pre><code>Imagen 2 — Muestra el CRM modular · 9:16
+Hyperrealistic vertical 9:16 advertising photo of the same Forgenex office, exact same fixed camera at eye level 2 meters back, same medium shot, same centered composition, same window light on the left. The same presenter (long dark hair, cream ribbed knit top, beige trousers) now turns slightly and gestures toward the large wall monitor, which displays a modular CRM dashboard with coral-red accented cards snapping together like building blocks (sales pipeline, clients, tasks modules), small "forgenex" coral logo on screen. Her expression is engaged and explanatory. The team keeps working at their computers, softly blurred behind. Warm professional color grade with coral accents. Hyperrealistic, natural skin texture, candid, ultra detailed, 8K, photorealistic.</code></pre>
+<p>Nota: si el dashboard sale con texto deformado, añade "abstract modular UI cards, no legible paragraphs".</p>
+<pre><code>Imagen 3 — Cierre / CTA cálido · 9:16
+Hyperrealistic vertical 9:16 advertising photo of the same Forgenex office, exact same fixed camera at eye level 2 meters back, same medium shot, same centered composition, same window light on the left, now slightly warmer and brighter. The same presenter stands centered looking directly at the camera with a warm genuine smile, relaxed confident posture, one hand subtly inviting. Behind her the wall monitor shows the clean unified Forgenex CRM dashboard with a soft coral glow, and the team works calmly at their computers in the softly blurred background. Rich warm aspirational color grade, trustworthy and approachable atmosphere. Hyperrealistic, natural skin texture and pores, ultra detailed, 8K, photorealistic.</code></pre>
+<p>Nota: para reforzar "asequible/cercano" mantén la oficina sencilla y luminosa, sin lujo corporativo.</p>
+<pre><code>Vídeo final · 9:16 · 10s
+Cinematic UGC-style advertising video (vertical 9:16, 10 seconds) of a female presenter talking directly to the camera inside a modern Forgenex office while the team works at their computers behind her. Use the three reference images provided as strict visual anchors — keep identical office, identical fixed camera at eye level 2 meters back, identical medium shot, identical centered composition, identical window light on the left, and the SAME presenter throughout (long dark hair, cream ribbed knit top, beige trousers).
+
+Segment 1 — Hook (0–3s): the presenter looks at the camera and speaks confidently, natural hand gesture; team blurred working behind. Warm professional grade.
+
+Segment 2 — Modular CRM (3–6.5s): she turns slightly and gestures to the wall monitor as modular coral CRM cards snap together into a grid; her expression engaged and explanatory. Subtle coral glow on screen.
+
+Segment 3 — Close (6.5–10s): she turns back to the camera with a warm genuine smile and a small inviting gesture, the clean CRM glowing behind her. Slow gentle push-in. Warm aspirational grade.
+
+Natural lifelike performance, realistic lip-sync, subtle camera presence. Photorealistic, cinematic, vertical 9:16. No text overlays. No music.
+Audio language: Spanish (español). The presenter speaks in Spanish, Spain accent (acento de España): a warm, close, confident female voice, around 28–32 years old, content-creator tone — "¿Tu empresa, sin orden? En Forgenex te montamos un CRM a medida, módulo a módulo. Solo lo que necesitas, y a un precio que sí puedes pagar."</code></pre>
+<p>Nota: si el lip-sync falla, genera solo el plano hablando (sin gesto al monitor) y monta el detalle del dashboard como inserto en CapCut.</p>
+<p>---</p>
+<h2>Copy de montaje (rótulos en CapCut + end card)</h2>
+<ul>
+<li><strong>0–3s:</strong> «¿Tu empresa, sin orden?»</li>
+<li><strong>3–6.5s:</strong> «CRM <strong>modular</strong> y <strong>a medida</strong>.»</li>
+<li><strong>6.5–9s:</strong> «Solo lo que necesitas. <strong>A buen precio.</strong>»</li>
+<li><strong>9–10s · End card:</strong> logo <strong>forgenex</strong> sobre fondo oscuro con acento coral + claim «Tu CRM, a tu medida.» → *"use the provided forgenex logo as the brand mark on the end card"*, sube <code>marcas/forgenex/logos/forgenex-logo.png</code>.</li>
+</ul>
+<p>⚠️ Logo de Forgenex en baja resolución — úsalo pequeño en una esquina o consigue versión en alta para end card a pantalla completa.</p>
+                    </div>
+                </div>
+                <div class="project-meta-box">
+                    <span class="md-tag-badge">Fichero de Apoyo Duplicado</span>
+                    <h3 class="showcase-title"><i class="fa-regular fa-file-lines"></i> creaciones/forgenex/crm negocio personas 1/prompts/prompts.md</h3>
+                    <div class="md-viewer">
+                        <h1>Pack de prompts — crm negocio personas 1</h1>
+<ul>
+<li><strong>Marca:</strong> Forgenex</li>
+<li><strong>Flujo:</strong> 3 imágenes + 1 vídeo (9:16, 10s)</li>
+<li><strong>Fecha:</strong> 2026-06-19</li>
+<li><strong>Herramientas:</strong> imágenes en ChatGPT Imagen / Midjourney / DALL-E · vídeo en Google Flow / Kling</li>
+</ul>
+<p>Mismo mensaje que el set del escritorio (CRM modular, a medida y asequible) pero con negocio real + personas + escena emocional hiperrealista. Historia: un dueño de pequeña empresa agobiado → la consultora de Forgenex (la actriz compartida: melena oscura, top canalé crema) le muestra el CRM modular → el negocio fluye y el equipo trabaja feliz. Cámara fija: plano medio del puesto de trabajo, altura de ojos, luz de ventana a la izquierda. Grade frío-desaturado → coral de marca → cálido aspiracional.</p>
+<p>---</p>
+<pre><code>Imagen 1 — El agobio (antes) · 9:16
+Hyperrealistic vertical 9:16 advertising photo inside a small real business office (a modest SME workspace with shelves, boxes and a window with brick wall outside). A stressed business owner, a man in his late 30s wearing a casual rolled-up shirt, sits at a cluttered desk overwhelmed — phone pinched to his ear, one hand on his forehead, surrounded by scattered paper invoices, sticky notes and folders, a messy laptop screen full of disconnected spreadsheets. Shot from a fixed camera at eye level, 1.5 meters back, medium shot, centered composition, large window as the only light source on the left. Cold, desaturated, slightly grey color grade conveying stress and overwhelm. Hyperrealistic, natural skin texture and pores, candid documentary feel, ultra detailed, 8K, photorealistic.</code></pre>
+<p>Nota: si el agobio no se lee, refuerza con "frustrated facial expression, tired eyes, tense posture".</p>
+<pre><code>Imagen 2 — La solución llega (durante) · 9:16
+Hyperrealistic vertical 9:16 advertising photo of the same small business office, exact same fixed camera at eye level 1.5 meters back, same medium shot, same centered composition, same window light on the left. Now the same business owner leans in with a hopeful expression while a friendly Forgenex consultant — a woman with long dark hair wearing a cream ribbed knit top and beige trousers — sits beside him and points at a laptop screen. The desk is half-cleared, papers fading. On the laptop, a modular CRM dashboard with coral-red accented cards snaps together like building blocks (sales pipeline, clients, tasks modules), subtle coral glow, small "forgenex" coral logo visible on screen. Neutral color grade with warm coral accents. Hyperrealistic, natural skin texture, candid, ultra detailed, 8K, photorealistic.</code></pre>
+<p>Nota: mantén a la consultora idéntica a la actriz compartida; si cambia de aspecto, fija "same woman, long dark hair, cream ribbed top".</p>
+<pre><code>Imagen 3 — El negocio que fluye (después) · 9:16
+Hyperrealistic vertical 9:16 advertising photo of the same small business office, exact same fixed camera at eye level 1.5 meters back, same medium shot, same centered composition, same window light on the left, now warm and favorable. The business owner sits relaxed and genuinely smiling at his now-tidy organized desk (one notebook, a coffee, a small plant), confident posture. In the softly blurred background a small team of two colleagues collaborate calmly. On the monitor, one clean unified Forgenex CRM dashboard glows with a soft coral accent. Rich warm aspirational color grade, successful and calm atmosphere. Hyperrealistic, natural skin texture and pores, candid lifestyle feel, ultra detailed, 8K, photorealistic.</code></pre>
+<p>Nota: para acentuar "asequible/cercano" mantén la oficina pequeña y sencilla, sin lujo corporativo.</p>
+<pre><code>Vídeo final · 9:16 · 10s
+Cinematic emotional advertising video (vertical 9:16, 10 seconds) telling the story of a small-business owner going from overwhelmed to in-control thanks to a modular CRM. Use the three reference images provided as strict visual anchors — keep identical small office, identical fixed camera at eye level 1.5 meters back, identical medium shot, identical centered composition, identical window light on the left throughout. Keep the same characters consistent: the male business owner and the female Forgenex consultant (long dark hair, cream ribbed top).
+
+Segment 1 — Overwhelm (0–3s): start on reference image 1, the stressed owner buried in papers, phone to ear, rubbing his forehead. Subtle handheld feel, cold desaturated grade. Small natural movement only.
+
+Segment 2 — The solution (3–6.5s): transition to reference image 2 — the consultant sits beside him and points at the laptop as modular coral CRM cards snap together into a grid; the owner leans in, expression turning hopeful. Papers clear away. Grade warms toward coral accents.
+
+Segment 3 — Flow &amp; success (6.5–10s): settle on reference image 3 — the owner relaxed and smiling at his tidy desk, team collaborating in the background, clean CRM glowing on screen. Slow gentle push-in. Warm aspirational grade, soft coral brand glow. End on a calm, confident frame.
+
+Transitions: seamless cinematic dissolves between segments. Overall color grade evolves from cold-grey to warm-coral. Photorealistic, cinematic, natural performances, vertical 9:16. No text overlays. No music.
+Audio language: Spanish (español). Voiceover spoken in Spanish, Spain accent (acento de España): a calm confident male voice, around 30s — "Tu empresa, sin orden. Con Forgenex montas tu CRM a medida, módulo a módulo. Solo lo que necesitas, a un precio que sí puedes pagar."</code></pre>
+<p>Nota: si el push-in final marea, fija "static locked frame" en el segmento 3.</p>
+<p>---</p>
+<h2>Copy de montaje (rótulos en CapCut + end card)</h2>
+<ul>
+<li><strong>0–3s:</strong> «Tu negocio, hecho un caos.»</li>
+<li><strong>3–6.5s:</strong> «CRM <strong>modular</strong> y <strong>a medida</strong>.»</li>
+<li><strong>6.5–9s:</strong> «Tu equipo, por fin a una. <strong>Asequible.</strong>»</li>
+<li><strong>9–10s · End card:</strong> logo <strong>forgenex</strong> sobre fondo oscuro con acento coral + claim «Tu CRM, a tu medida.» → indica *"use the provided forgenex logo as the brand mark on the end card"* y sube <code>marcas/forgenex/logos/forgenex-logo.png</code>.</li>
+</ul>
+<p>⚠️ El logo de Forgenex está en baja resolución — úsalo pequeño en una esquina o consigue una versión en alta para el end card a pantalla completa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Prompts, CapCut instructions, & Custom Training -->
+            <div class="details-column">
+                <div class="project-meta-box">
+                    <span class="card-brand">Forgenex</span>
+                    <h2 class="card-title" style="font-size: 1.8rem; margin-bottom: 14px;">Showroom y Metodología</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                        Campaña publicitaria generada con Inteligencia Artificial utilizando la técnica 3+1 y consistencia visual.
+                    </p>
+                </div>
+
+                <!-- Prompts List -->
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-code"></i> Fórmulas de Prompts Utilizadas</h3>
+                    
+                    <div class="prompt-panel">
+                        <div class="prompt-content">
+                            <p style="color: var(--text-muted);">No se encontraron prompts estructurados en código. Lee los ficheros Markdown adjuntos para estudiar la campaña.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CapCut Guide -->
+                
+                <div class="project-meta-box">
+                    <h3 class="showcase-title"><i class="fa-solid fa-scissors"></i> Instrucciones de Montaje en CapCut</h3>
+                    <div class="prompt-panel">
+                        <div class="prompt-content" style="max-height: none;">
+                            <p>.</p>
+<p>---</p>
+<h2>Copy de montaje (rótulos en CapCut + end card)</h2>
+<ul>
+<li><strong>0–3s:</strong> «Tu empresa, hecha un caos.»</li>
+<li><strong>3–6.5s:</strong> «CRM <strong>modular</strong> y <strong>a medida</strong>.»</li>
+<li><strong>6.5–9s:</strong> «Solo lo que necesitas. <strong>Asequible.</strong>»</li>
+<li><strong>9–10s · End card:</strong> logo <strong>forgenex</strong> sobre fondo oscuro con acento coral + claim «Tu CRM, a tu medida.» → en Flow/Kling indica: *"use the provided forgenex logo as the brand mark on the end card"* y sube <code>marcas/forgenex/logos/forgenex-logo.png</code>.</li>
+</ul>
+<p>⚠️ El logo de Forgenex está en baja resolución — para el end card a pantalla completa conviene una versión en alta calidad, o úsalo pequeño en una esquina.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Section -->
+                <div class="project-meta-box">
+                    <h4 class="detail-training-title"><i class="fa-solid fa-graduation-cap"></i> Lecciones de este Proyecto</h4>
+                    <div class="detail-training-body">
+                        <p>Este proyecto representa la técnica de **consistencia visual** guiada por referencias cruzadas.</p>
+                        <ul>
+                            <li><strong>Coherencia de Estructura:</strong> Se preservan los elementos tridimensionales fijos de fondo usando guías de imagen en Google Flow.</li>
+                            <li><strong>Postproducción:</strong> El vídeo se renderiza limpio y el texto publicitario y la música se montan externamente en CapCut.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Jordan AI Ads. Diseñado con fines de entrenamiento y showcase de prompts.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Interactive Image Slider
+        const tabs = document.querySelectorAll('.selector-tab');
+        const activeImg = document.getElementById('detail-active-img');
+
+        if (tabs && activeImg) {
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    activeImg.src = tab.getAttribute('data-img-src');
+                });
+            });
+        }
+
+        // Copy to clipboard actions
+        const copyBtns = document.querySelectorAll('.js-copy-prompt');
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const text = decodeURIComponent(btn.getAttribute('data-text'));
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Copiado!`;
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
