@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderProjects(projects);
         setupFilters();
         setupTrainingTabs();
+        
+        // Cargar videocapturas
+        loadVideocaps();
     } catch (error) {
         console.error("Error loading projects database:", error);
         const grid = document.getElementById("projects-grid");
@@ -238,4 +241,52 @@ function parseInline(str) {
     // Inline Code
     html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
     return html;
+}
+
+// --- Cargar y Renderizar Videocaps ---
+async function loadVideocaps() {
+    try {
+        const response = await fetch("videocaps.json");
+        if (!response.ok) {
+            renderVideocaps([]);
+            return;
+        }
+        const videocaps = await response.json();
+        renderVideocaps(videocaps);
+    } catch (error) {
+        console.error("Error loading videocaps database:", error);
+        renderVideocaps([]);
+    }
+}
+
+function renderVideocaps(videocapsList) {
+    const container = document.getElementById("videocaps-grid");
+    if (!container) return;
+    container.innerHTML = "";
+
+    if (videocapsList.length === 0) {
+        container.innerHTML = `
+            <div class="no-projects" style="grid-column: 1 / -1; padding: 60px 20px;">
+                <i class="fa-solid fa-video-slash" style="font-size: 2.5rem; color: var(--text-muted); margin-bottom: 15px;"></i>
+                <h3 style="margin-bottom: 8px;">No hay grabaciones de pantalla</h3>
+                <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">Coloca tus archivos de vídeo en la carpeta <code>videocap/</code> en la raíz del proyecto y di <strong>ANALIZA</strong> para sincronizarlas y verlas aquí.</p>
+            </div>
+        `;
+        return;
+    }
+
+    videocapsList.forEach(video => {
+        const card = document.createElement("div");
+        card.className = "videocap-card";
+        card.innerHTML = `
+            <div class="videocap-media">
+                <video src="${video.url}" controls playsinline></video>
+            </div>
+            <div class="videocap-content">
+                <h3 class="videocap-title">${video.title}</h3>
+                <span class="videocap-date"><i class="fa-regular fa-calendar"></i> ${video.date}</span>
+            </div>
+        `;
+        container.appendChild(card);
+    });
 }

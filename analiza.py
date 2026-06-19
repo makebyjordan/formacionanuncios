@@ -10,8 +10,11 @@ import subprocess
 WORKSPACE_DIR = "/Users/makebyjordan/local/myweb2teach"
 SOURCE_CREACIONES = os.path.join(WORKSPACE_DIR, "allVideosPhotoIaALL/creaciones")
 SOURCE_MARCAS = os.path.join(WORKSPACE_DIR, "allVideosPhotoIaALL/marcas")
+SOURCE_VIDEOCAP = os.path.join(WORKSPACE_DIR, "videocap")
 WEB_ASSETS_CREACIONES = os.path.join(WORKSPACE_DIR, "web/assets/creaciones")
+WEB_ASSETS_VIDEOCAP = os.path.join(WORKSPACE_DIR, "web/assets/videocap")
 PROJECTS_JSON_PATH = os.path.join(WORKSPACE_DIR, "web/projects.json")
+VIDEOCAPS_JSON_PATH = os.path.join(WORKSPACE_DIR, "web/videocaps.json")
 PROJECTS_HTML_DIR = os.path.join(WORKSPACE_DIR, "web/projects")
 
 # Template HTML para las páginas de detalle
@@ -350,9 +353,9 @@ def parse_prompts_file(file_path):
     return prompts
 
 def analyze_and_update():
-    print("=== [ANALIZA] Iniciando escaneo de nuevos anuncios ===")
+    print("=== [ANALIZA] Iniciando escaneo de nuevos anuncios y videocapturas ===")
     
-    # Cargar base de datos actual
+    # Cargar base de datos actual de proyectos
     if os.path.exists(PROJECTS_JSON_PATH):
         with open(PROJECTS_JSON_PATH, 'r', encoding='utf-8') as f:
             projects = json.load(f)
@@ -361,6 +364,20 @@ def analyze_and_update():
         
     registered_videos = {p['videoUrl'] for p in projects}
     new_projects_detected = []
+    
+    # Cargar base de datos actual de videocapturas
+    if os.path.exists(VIDEOCAPS_JSON_PATH):
+        try:
+            with open(VIDEOCAPS_JSON_PATH, 'r', encoding='utf-8') as f:
+                videocaps = json.load(f)
+        except Exception as e:
+            print(f"Error cargando videocaps.json: {e}")
+            videocaps = []
+    else:
+        videocaps = []
+        
+    registered_videocaps = {vc['filename'] for vc in videocaps}
+    new_videocaps_detected = []
     
     # Escanear creaciones
     for root, dirs, files in os.walk(SOURCE_CREACIONES):
@@ -595,14 +612,58 @@ def analyze_and_update():
                 projects.append(new_project)
                 new_projects_detected.append(campaign_title)
                 
-    if not new_projects_detected:
-        print("\n[v] No se han detectado nuevos anuncios. Todo el contenido está actualizado.")
+    # Escanear videocapturas locales
+    if os.path.exists(SOURCE_VIDEOCAP):
+        for file in os.listdir(SOURCE_VIDEOCAP):
+            if file.lower().endswith(('.mp4', '.mov', '.m4v', '.webm', '.avi')) and not file.startswith('.'):
+                if file in registered_videocaps:
+                    continue
+                    
+                print(f"\n[!] ¡Nueva videocaptura detectada!: {file}")
+                
+                # Crear carpeta de destino
+                os.makedirs(WEB_ASSETS_VIDEOCAP, exist_ok=True)
+                
+                # Copiar archivo
+                src_path = os.path.join(SOURCE_VIDEOCAP, file)
+                dest_path = os.path.join(WEB_ASSETS_VIDEOCAP, file)
+                print(f" -> Copiando a web/assets/videocap/{file}...")
+                shutil.copy(src_path, dest_path)
+                
+                # Título amigable
+                base_name = os.path.splitext(file)[0]
+                friendly_title = base_name.replace('-', ' ').replace('_', ' ').title()
+                
+                # Fecha de hoy
+                import datetime
+                detection_date = datetime.date.today().isoformat()
+                
+                new_vc = {
+                    "filename": file,
+                    "title": friendly_title,
+                    "date": detection_date,
+                    "url": f"./assets/videocap/{urllib.parse.quote(file)}"
+                }
+                
+                videocaps.append(new_vc)
+                new_videocaps_detected.append(friendly_title)
+
+    # Verificar si hubo algún cambio
+    if not new_projects_detected and not new_videocaps_detected:
+        print("\n[v] No se han detectado nuevos anuncios ni videocapturas. Todo el contenido está actualizado.")
         return False
         
-    # Guardar base de datos actualizada
-    print(f"\n[+] Guardando base de datos con {len(new_projects_detected)} nuevos proyectos...")
-    with open(PROJECTS_JSON_PATH, 'w', encoding='utf-8') as f:
-        json.dump(projects, f, indent=2, ensure_ascii=False)
+    # Guardar base de datos de proyectos si hubo cambios
+    if new_projects_detected:
+        print(f"\n[+] Guardando base de datos con {len(new_projects_detected)} nuevos proyectos...")
+        with open(PROJECTS_JSON_PATH, 'w', encoding='utf-8') as f:
+            json.dump(projects, f, indent=2, ensure_ascii=False)
+            
+    # Guardar base de datos de videocaps si hubo cambios
+    if new_videocaps_detected:
+        print(f"\n[+] Guardando base de datos con {len(new_videocaps_detected)} nuevas videocapturas...")
+        with open(VIDEOCAPS_JSON_PATH, 'w', encoding='utf-8') as f:
+            json.dump(videocaps, f, indent=2, ensure_ascii=False)
         
     # --- Ejecutar Despliegue (rsync) ---
     print("\n[+] Desplegando cambios al servidor Hestia (Cloudflare: jordanstarter.eu)...")
@@ -620,14 +681,22 @@ def analyze_and_update():
     print("\n[+] Vinculando y subiendo los cambios a GitHub...")
     try:
         subprocess.run(["git", "add", "."], check=True, cwd=WORKSPACE_DIR)
-        commit_msg = f"feat: add {', '.join(new_projects_detected)} from automated allVideosPhotoIaALL analysis"
+        
+        # Crear mensaje de commit descriptivo
+        changes_list = []
+        if new_projects_detected:
+            changes_list.append(f"projects: {', '.join(new_projects_detected)}")
+        if new_videocaps_detected:
+            changes_list.append(f"videocaps: {', '.join(new_videocaps_detected)}")
+            
+        commit_msg = f"feat: add {'; '.join(changes_list)} from automated analysis"
         subprocess.run(["git", "commit", "-m", commit_msg], check=True, cwd=WORKSPACE_DIR)
         subprocess.run(["git", "push", "-u", "origin", "main"], check=True, cwd=WORKSPACE_DIR)
         print(" -> Cambios subidos a GitHub con éxito.")
     except Exception as e:
         print(f" -> ERROR en Git push: {e}")
         
-    print(f"\n=== [ANALIZA] Proceso finalizado. Se han añadido {len(new_projects_detected)} proyectos. ===")
+    print(f"\n=== [ANALIZA] Proceso finalizado. Se han añadido {len(new_projects_detected)} proyectos y {len(new_videocaps_detected)} videocapturas. ===")
     return True
 
 if __name__ == "__main__":
